@@ -6,12 +6,12 @@ window.onload = function(){
 
 function loadHeader(){
 	var header = document.getElementById("header");
-	load("header.html", header)
+	load("../header.html", header)
 }
 
 function loadFooter(){
 	var footer = document.getElementById("footer");
-	load("footer.html", footer)
+	load("../footer.html", footer)
 }
 
 
