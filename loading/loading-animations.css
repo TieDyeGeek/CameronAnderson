@@ -349,5 +349,74 @@
 }
 
 
+/*-------------------------------------*/
+
+
+.dump-truck {
+	width: 100%;
+	height: 100%;
+}
+
+.CAT-dump-truck-wheel-left {
+	animation-name: CAT-dump-truck-wheel;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: 345px 421px;
+}
+
+.CAT-dump-truck-wheel-right {
+	animation-name: CAT-dump-truck-wheel;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: 870px 421px;
+}
+
+
+.CAT-dump-truck-yellow {
+	fill: #feb600;
+}
+
+.CAT-dump-truck-shaddow-1 {
+	fill: #e79300;
+}
+
+.CAT-dump-truck-shaddow-2 {
+	fill: #c37000;
+}
+
+.CAT-dump-truck-glass {
+	fill: #3cf;
+}
+
+.CAT-dump-truck-rail {
+	fill: none;
+	stroke: #333;
+	stroke-miterlimit: 10;
+	stroke-width: 8.5px;
+}
+
+.CAT-dump-truck-tire {
+	fill: #333;
+}
+
+@keyframes CAT-dump-truck-wheel {
+	0%		{ transform: rotate(0deg); }
+	100%	{ transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
