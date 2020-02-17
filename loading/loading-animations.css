@@ -358,6 +358,7 @@
 	height: 90%;
 	padding-left: 10%;
 	padding-top: 20%;
+	overflow: visible;
 }
 
 .CAT-dump-truck-wheel {
@@ -416,7 +417,7 @@
 
 .boulders {
 	position: absolute;
-	padding-left: 4%;
+	padding-left: 50px;
 
 	animation-name: boulder-falling;
 	animation-duration: 15s;
@@ -469,7 +470,7 @@
 	56%		{ transform: translate(0px,40px); }
 	75%		{ opacity: 1; }
 	78%		{ opacity: 0; }
-	80%		{ transform: translate(-100px,62px); }
+	80%		{ transform: translate(-100px,65px); }
 	100%	{ opacity: 0; }
 }
 
