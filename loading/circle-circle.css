@@ -1,0 +1,85 @@
+.cc-outer-circle {
+	fill: #00f;
+}
+
+.cc-inner-circle {
+	fill: #f00;
+
+	animation-name: circle-circle;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.cc-inner-line {
+	fill: none;
+	stroke: #fff;
+	stroke-miterlimit: 10;
+	stroke-width: 1.5px;
+}
+
+.circle-circle {
+	transform-origin: 50px 50px;
+}
+
+.cc-2 {
+	transform: rotate(22.5deg);
+}
+
+.cc-3 {
+	transform: rotate(45deg);
+}
+
+.cc-4 {
+	transform: rotate(67.5deg);
+}
+
+.cc-5 {
+	transform: rotate(90deg);
+}
+
+.cc-6 {
+	transform: rotate(112.5deg);
+}
+
+.cc-7 {
+	transform: rotate(135deg);
+}
+
+.cc-8 {
+	transform: rotate(157.5deg);
+}
+
+.cc-circle-2 {
+		animation-delay: 0.25s;
+}
+
+.cc-circle-3 {
+		animation-delay: 0.5s;
+}
+
+.cc-circle-4 {
+		animation-delay: 0.75s;
+}
+
+.cc-circle-5 {
+		animation-delay: 1s;
+}
+
+.cc-circle-6 {
+		animation-delay: 1.25s;
+}
+
+.cc-circle-7 {
+		animation-delay: 1.5s;
+}
+
+.cc-circle-8 {
+		animation-delay: 1.75s;
+}
+
+@keyframes circle-circle {
+	0%		{ transform: translateX(0); fill: #f0f; }
+	50%		{ transform: translateX(90px); fill: #ff0; }
+	100%	{ transform: translateX(0); fill: #f0f; }
+}
