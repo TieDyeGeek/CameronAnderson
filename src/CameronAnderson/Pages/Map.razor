@@ -1,0 +1,142 @@
+﻿@page "/map"
+
+<link rel="stylesheet" type="text/css" href="css/map.css">
+
+@if (Loading)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<button class="btn btn-primary" @onclick="ZoomIn"> + </button>
+	<button class="btn btn-primary" @onclick="ResetZoom"> @ZoomLevel CF(@ChunkFactor) </button>
+	<button class="btn btn-primary" @onclick="ZoomOut"> - </button>
+	<button class="btn btn-primary" @onclick="MoveLeft"> left </button>
+	<button class="btn btn-primary" @onclick="MoveRight"> right </button>
+	<button class="btn btn-primary" @onclick="MoveUp"> up </button>
+	<button class="btn btn-primary" @onclick="MoveDown"> down </button>
+
+	<div class="map-container">
+		<div class="map" style="padding-left: @HorizontalOffsetPx; padding-top: @VerticalOffsetPx;">
+			@for (var i = 0; i < DisplayHeight / (ChunkDistance * ChunkFactor); i++)
+			{
+				<div class="row row-@i" style="height: @ChunkDistancePx; width: @DisplayWidthPx;">
+					@for (var j = 0; j < DisplayWidth / (ChunkDistance * ChunkFactor); j++)
+					{
+						<div class="column column-@j"
+							 style="width: @ChunkDistancePx;
+									height: @ChunkDistancePx;
+									background-color: @GetColor(i*ChunkFactor, j*ChunkFactor);
+									font-size: 1em">
+							(@(i*ChunkFactor), @(j*ChunkFactor))
+						</div>
+					}
+				</div>
+			}
+		</div>
+	</div>
+}
+
+@code
+{
+	public bool Loading = true;
+	public double DisplayWidth = 2000;
+	public string DisplayWidthPx => DisplayWidth + "px";
+	public double DisplayHeight = 2000;
+	private double _zoomLevel = 1;
+	public double ZoomLevel
+	{
+		get => Math.Round(_zoomLevel, 2);
+		set => _zoomLevel = value;
+	}
+	public double ChunkDistance => 100 * ZoomLevel;
+	public int ChunkFactor => PreviousPowerOf2((int)(2 / ZoomLevel));
+	public string ChunkDistancePx => (ChunkDistance * ChunkFactor).ToString() + "px";
+	public int HorizontalOffset = 0;
+	public string HorizontalOffsetPx => HorizontalOffset + "px";
+	public int VerticalOffset = 0;
+	public string VerticalOffsetPx => VerticalOffset + "px";
+
+	int PreviousPowerOf2(int n)
+	{
+		// do till only one bit is left
+		while ((n & n - 1) != 0)
+		{
+			n = n & n - 1;        // unset rightmost bit
+		}
+
+		// `n` is now a power of two (less than or equal to `n`)
+		return n;
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		Loading = false;
+	}
+
+	private void ZoomIn()
+	{
+		if (ZoomLevel >= 1.95)
+		{
+			ZoomLevel = 2;
+			return;
+		}
+
+		ZoomLevel += 0.1;
+	}
+
+	private void ZoomOut()
+	{
+		if (ZoomLevel <= 0.55)
+		{
+			ZoomLevel = 0.5;
+			return;
+		}
+
+		ZoomLevel -= 0.1;
+	}
+
+	private void ResetZoom()
+	{
+		ZoomLevel = 1;
+	}
+
+	private string GetColor(int a, int b)
+	{
+		var options = new List<string>
+	{
+			"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"
+		};
+
+		var color = "#";
+
+		var random = new Random(a * b);
+
+		for (var i = 0; i < 6; i++)
+		{
+			color += options.Skip(random.Next(0, 15)).First();
+		}
+
+		return color;
+	}
+
+	private void MoveLeft()
+	{
+		HorizontalOffset -= 25;
+	}
+
+	private void MoveRight()
+	{
+		HorizontalOffset += 25;
+	}
+
+	private void MoveUp()
+	{
+		VerticalOffset -= 25;
+	}
+
+	private void MoveDown()
+	{
+		VerticalOffset += 25;
+	}
+}

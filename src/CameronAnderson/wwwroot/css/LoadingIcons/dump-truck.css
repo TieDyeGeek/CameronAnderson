@@ -1,4 +1,4 @@
-.CAT-dump-truck {
+.dump-truck-container {
 	position: relative;
 	width: 90%;
 	height: 90%;
@@ -7,53 +7,53 @@
 	overflow: visible;
 }
 
-.CAT-dump-truck-wheel {
-	animation-name: CAT-dump-truck-wheel;
+.dump-truck-wheel {
+	animation-name: dump-truck-wheel;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease;
 }
 
-.CAT-dump-truck-wheel-left {
+.dump-truck-wheel-left {
 	transform-origin: 345px 421px;
 }
 
-.CAT-dump-truck-wheel-right {
+.dump-truck-wheel-right {
 	transform-origin: 870px 421px;
 }
 
-.CAT-dump-truck-bed {
-	animation-name: CAT-dump-truck-bed;
+.dump-truck-bed {
+	animation-name: dump-truck-bed;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	transform-origin: 600px 450px;
 }
 
-.CAT-dump-truck-yellow {
+.dump-truck-yellow {
 	fill: #feb600;
 }
 
-.CAT-dump-truck-shaddow-1 {
+.dump-truck-shaddow-1 {
 	fill: #e79300;
 }
 
-.CAT-dump-truck-shaddow-2 {
+.dump-truck-shaddow-2 {
 	fill: #c37000;
 }
 
-.CAT-dump-truck-glass {
+.dump-truck-glass {
 	fill: #3cf;
 }
 
-.CAT-dump-truck-rail {
+.dump-truck-rail {
 	fill: none;
 	stroke: #333;
 	stroke-miterlimit: 10;
 	stroke-width: 8.5px;
 }
 
-.CAT-dump-truck-tire {
+.dump-truck-tire {
 	fill: #333;
 }
 
@@ -91,7 +91,7 @@
 	fill: #7c3100;
 }
 
-@keyframes CAT-dump-truck-wheel {
+@keyframes dump-truck-wheel {
 	0%		{ transform: rotate(0deg); }
 	15%		{ transform: rotate(0deg); }
 	50%		{ transform: rotate(720deg); }
@@ -99,7 +99,7 @@
 	100%	{ transform: rotate(810deg); }
 }
 
-@keyframes CAT-dump-truck-bed {
+@keyframes dump-truck-bed {
 	0%		{ transform: rotate(0deg); }
 	50%		{ transform: rotate(0deg); }
 	70%		{ transform: rotate(-20deg); }

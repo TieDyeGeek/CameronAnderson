@@ -1,0 +1,200 @@
+﻿@page "/resume"
+
+<link href="css/resume.css" rel="stylesheet" />
+
+@if (resume == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<div class="heading">
+		<div class="name">@resume.Name</div>
+		<div class="location">@resume.Location</div>
+		@foreach (var link in resume.Links)
+		{
+			<NavLink class="link" href="@link.Uri">
+				@link.Text
+			</NavLink>
+
+			@if (!link.Equals(resume.Links.Last()))
+			{
+				<svg class="link-separator" height="30" width="30">
+					<circle cx="15" cy="15" r="10" fill="black" />
+				</svg>
+			}
+		}
+	</div>
+	<div class="educations">
+		@foreach (var education in resume.Education)
+		{
+			<div class="education">
+				<div class="experience-heading">@education.Degree</div>
+				<div class="experience-date">@education.Date.ToString("Y")</div>
+				<div class="experience-subheading">@education.Major</div>
+				<div class="experience-note">@education.Institution, @education.InstitutionLocation</div>
+				<div class="experience-note">GPA: @education.Gpa.ToString("0.0")</div>
+				<div class="experience-note">@education.Minor</div>
+			</div>
+		}
+	</div>
+	<div class="experiences">
+		@foreach (var experience in resume.Experiences)
+		{
+			<div class="experince">
+				<div class="experience-heading">@experience.Position</div>
+				<div class="experience-date">@experience.EmploymentStart.ToString("Y") -- @(experience.EmploymentEnd == null ? "Present" : experience.EmploymentEnd.Value.ToString("Y"))</div>
+				<div class="experience-subheading">@experience.Company -- @experience.CompanyLocation</div>
+
+				<div class="notes">
+					@foreach (var note in experience.Notes)
+					{
+						<div class="experience-note">@note</div>
+					}
+				</div>
+			</div>
+		}
+	</div>
+}
+
+@code
+{
+	private Resumee resume { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		resume = new Resumee
+		{
+			Name = "Cameron Anderson",
+			Location = "Peoria, IL area",
+			Links = new List<Link>
+			{
+				new Link
+				{
+					Text = "cell",
+					Uri = @"tel:+1-309-231-7834"
+				},
+				new Link
+				{
+					Text = "email",
+					Uri = @"mailto:canderson3.14@me.com"
+				},
+				new Link
+				{
+					Text = "linkdin",
+					Uri = @"https://www.linkedin.com/in/cameron-anderson/"
+				},
+				new Link
+				{
+					Text = "github",
+					Uri = @"https://github.com/TieDyeGeek/"
+				}
+			},
+			Education = new List<Education>
+			{
+				new Education
+				{
+					Degree = "Master of Science",
+					Date = new DateTime(2018, 5, 1),
+					Major = "Computer Science",
+					Project = "Two-Player Asymmetrical Virtual Reality Maze Game",
+					Institution = "Western Illinois University",
+					InstitutionLocation = "Macomb, IL",
+					Gpa = 4
+				},
+				new Education
+				{
+					Degree = "Bachelor of Science",
+					Date = new DateTime(2017, 5, 1),
+					Major = "Computer Science",
+					Minor = "Information Systems, Mathematics",
+					Institution = "Western Illinois University",
+					InstitutionLocation = "Macomb, IL",
+					Gpa = 3.4
+				}
+			},
+			Experiences = new List<Experience>
+			{
+				new Experience
+				{
+					Company = "CSE Software, Inc.",
+					CompanyLocation = "Peoria, IL",
+					Position = "Technical Architect",
+					EmploymentStart = new DateTime(2020, 12, 24),
+					EmploymentEnd = null,
+					Notes = new List<string>
+					{
+						"asdf",
+						"Training ..."
+					}
+				},
+				new Experience
+				{
+					Company = "CSE Software, Inc.",
+					CompanyLocation = "Peoria, IL",
+					Position = "Enterprise Software Developer",
+					EmploymentStart = new DateTime(2018, 11, 27),
+					EmploymentEnd = new DateTime(2020, 12, 24),
+					Notes = new List<string>
+					{
+						"Deveop and maintain enterprise web applications using C# and .NET",
+						"Create training exercises for current employees and new hires",
+						"C#, MVC, .NET Framework, .NET Core, SQL Server, Atlassian tools (Bitbucket, Jira, Confluence), Azure DevOps"
+					}
+				},
+				new Experience
+				{
+					Company = "Western Illinois University Housing & Dining Services",
+					CompanyLocation = "Macomb, IL",
+					Position = "Assistant Complex Director",
+					EmploymentStart = new DateTime(2017, 6, 1),
+					EmploymentEnd = new DateTime(2018, 5, 19),
+					Notes = new List<String>
+					{
+						"Supervised two Resident Managers in Graduate and Family Housing",
+						"Served on the on-call duty rotation for 3 facilities responding to facilities and crisis situations",
+						"Assisted with maintaining the housing website, creating video training materials for Resident Assistants, and marketing housing renewal"
+					}
+				}
+			}
+		};
+		resume = null;
+	}
+
+	public class Resumee
+	{
+		public string Name { get; set; }
+		public string Location { get; set; }
+		public List<Link> Links { get; set; }
+		public List<Education> Education { get; set; }
+		public List<Experience> Experiences { get; set; }
+	}
+
+	public class Link
+	{
+		public string Text { get; set; }
+		public string Uri { get; set; }
+	}
+
+	public class Education
+	{
+		public string Degree { get; set; }
+		public DateTime Date { get; set; }
+		public string Major { get; set; }
+		public string Minor { get; set; }
+		public string Project { get; set; }
+		public string Institution { get; set; }
+		public string InstitutionLocation { get; set; }
+		public double Gpa { get; set; }
+	}
+
+	public class Experience
+	{
+		public string Company { get; set; }
+		public string CompanyLocation { get; set; }
+		public string Position { get; set; }
+		public DateTime EmploymentStart { get; set; }
+		public DateTime? EmploymentEnd { get; set; }
+		public List<string> Notes { get; set; }
+	}
+}
