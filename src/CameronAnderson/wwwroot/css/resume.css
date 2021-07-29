@@ -27,15 +27,8 @@
 	margin-right: 1em;
 }
 
-.educations {
-	margin-top: 2em;
-}
-
-.education {
-	display: inline-block;
-	width: 50%;
-	min-width: 500px;
-	padding-top: 3em;
+.section {
+	padding-top: 2em;
 }
 
 .experience {
