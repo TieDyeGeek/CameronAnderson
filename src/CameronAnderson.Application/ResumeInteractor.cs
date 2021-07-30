@@ -11,107 +11,158 @@ namespace CameronAnderson.Resume
 			{
 				Name = "Cameron Anderson",
 				Location = "Peoria, IL area",
-				Links = GetLinks(),
-				Education = GetEducation(),
+				Links = Links,
+				Education = Education,
 				Experiences = new List<Experience>
 				{
-					new Experience
-					{
-						Company = "CSE Software, Inc.",
-						CompanyLocation = "Peoria, IL",
-						Position = "Technical Architect",
-						EmploymentStart = new DateTime(2020, 12, 24),
-						EmploymentEnd = null,
-						Notes = new List<string>
-						{
-							"asdf",
-							"Training ..."
-						}
-					},
-					new Experience
-					{
-						Company = "CSE Software, Inc.",
-						CompanyLocation = "Peoria, IL",
-						Position = "Enterprise Software Developer",
-						EmploymentStart = new DateTime(2018, 11, 27),
-						EmploymentEnd = new DateTime(2020, 12, 24),
-						Notes = new List<string>
-						{
-							"Deveop and maintain enterprise web applications using C# and .NET",
-							"Create training exercises for current employees and new hires",
-							"C#, MVC, .NET Framework, .NET Core, SQL Server, Atlassian tools (Bitbucket, Jira, Confluence), Azure DevOps"
-						}
-					},
-					new Experience
-					{
-						Company = "Western Illinois University Housing & Dining Services",
-						CompanyLocation = "Macomb, IL",
-						Position = "Assistant Complex Director",
-						EmploymentStart = new DateTime(2017, 6, 1),
-						EmploymentEnd = new DateTime(2018, 5, 19),
-						Notes = new List<String>
-						{
-							"Supervised two Resident Managers in Graduate and Family Housing",
-							"Served on the on-call duty rotation for 3 facilities responding to facilities and crisis situations",
-							"Assisted with maintaining the housing website, creating video training materials for Resident Assistants, and marketing housing renewal"
-						}
-					}
-				}
+					TechnicalArchitect,
+					Developer,
+					AssistantComplexDirector,
+					CommunityCoordinator,
+					ResidentAssistant
+				},
+				Skills = Skills
 			};
 		}
 
-		private static List<Link> GetLinks()
+		private static List<string> Skills => new()
 		{
-			return new List<Link>
-			{
-				new Link
-				{
-					Text = "cell",
-					Uri = @"tel:+1-309-231-7834"
-				},
-				new Link
-				{
-					Text = "email",
-					Uri = @"mailto:canderson3.14@me.com"
-				},
-				new Link
-				{
-					Text = "linkdin",
-					Uri = @"https://www.linkedin.com/in/cameron-anderson/"
-				},
-				new Link
-				{
-					Text = "github",
-					Uri = @"https://github.com/TieDyeGeek/"
-				}
-			};
-		}
+			"C#",
+			".NET",
+			"Azure",
+			"REST APIs",
+			"MVC",
+			"UWP",
+			"Selenium",
+			"Blazor",
+			"Azure DevOps",
+			"Atlassian Tools (Bitbucket, Jira, Confluence)",
+			"HTML",
+			"CSS",
+			"SQL"
+		};
 
-		private static List<Education> GetEducation()
+		private static List<Link> Links => new()
 		{
-			return new List<Education>
+			new Link
 			{
-				new Education
-				{
-					Degree = "Master of Science",
-					Date = new DateTime(2018, 5, 1),
-					Major = "Computer Science",
-					Project = "Two-Player Asymmetrical Virtual Reality Maze Game",
-					Institution = "Western Illinois University",
-					InstitutionLocation = "Macomb, IL",
-					Gpa = 4
-				},
-				new Education
-				{
-					Degree = "Bachelor of Science",
-					Date = new DateTime(2017, 5, 1),
-					Major = "Computer Science",
-					Minor = "Information Systems, Mathematics",
-					Institution = "Western Illinois University",
-					InstitutionLocation = "Macomb, IL",
-					Gpa = 3.4
-				}
-			};
-		}
+				Text = "cell",
+				Uri = @"tel:+1-309-231-7834"
+			},
+			new Link
+			{
+				Text = "email",
+				Uri = @"mailto:canderson3.14@me.com"
+			},
+			new Link
+			{
+				Text = "linkedin",
+				Uri = @"https://www.linkedin.com/in/cameron-anderson/"
+			},
+			new Link
+			{
+				Text = "github",
+				Uri = @"https://github.com/TieDyeGeek/"
+			}
+		};
+		
+		private static List<Education> Education => new()
+		{
+			new Education
+			{
+				Degree = "Master of Science",
+				Date = new DateTime(2018, 5, 1),
+				Major = "Computer Science",
+				Project = "Two-Player Asymmetrical Virtual Reality Maze Game",
+				Institution = "Western Illinois University",
+				InstitutionLocation = "Macomb, IL",
+				Gpa = 4
+			},
+			new Education
+			{
+				Degree = "Bachelor of Science",
+				Date = new DateTime(2017, 5, 1),
+				Major = "Computer Science",
+				Minor = "Information Systems, Mathematics",
+				Institution = "Western Illinois University",
+				InstitutionLocation = "Macomb, IL",
+				Gpa = 3.4
+			}
+		};
+	
+		private static Experience TechnicalArchitect => new()
+		{
+			Company = "CSE Software, Inc.",
+			CompanyLocation = "Peoria, IL",
+			Position = "Technical Architect",
+			EmploymentStart = new DateTime(2020, 12, 24),
+			EmploymentEnd = null,
+			Notes = new List<string>
+			{
+				"Plan, develop, test, deploy, and maintain enterprise web and desktop applications",
+				"Effectively translate customer requirements into application design",
+				"Provide peer code reviews to ensure code quality and maintainability standards",
+				"Understand project budgets and impacts of ramping up/down of resources",
+				"Assist Team Lead in targeting topics for employee growth plans",
+				"Create and maintain CSE's open source projects"
+			}
+		};
+
+		private static Experience Developer => new()
+		{
+			Company = "CSE Software, Inc.",
+			CompanyLocation = "Peoria, IL",
+			Position = "Enterprise Software Developer",
+			EmploymentStart = new DateTime(2018, 11, 27),
+			EmploymentEnd = new DateTime(2020, 12, 24),
+			Notes = new List<string>
+			{
+				"Deveop and maintain enterprise web applications using C# and .NET",
+				"Create training exercises for current employees and new hires"
+			}
+		};
+
+		private static Experience AssistantComplexDirector => new()
+		{
+			Company = "Western Illinois University Housing & Dining Services",
+			CompanyLocation = "Macomb, IL",
+			Position = "Assistant Complex Director",
+			EmploymentStart = new DateTime(2017, 6, 1),
+			EmploymentEnd = new DateTime(2018, 5, 19),
+			Notes = new List<string>
+			{
+				"Supervised two Resident Managers in Graduate and Family Housing",
+				"Served on the on-call duty rotation for 3 facilities responding to facilities and crisis situations",
+				"Assisted with maintaining the housing website, creating video training materials for Resident Assistants, and marketing housing renewal"
+			}
+		};
+
+		private static Experience CommunityCoordinator => new()
+		{
+			Company = "Western Illinois University Housing & Dining Services",
+			CompanyLocation = "Macomb, IL",
+			Position = "Community Coordinator",
+			EmploymentStart = new DateTime(2017, 2, 19),
+			EmploymentEnd = new DateTime(2017, 6, 1),
+			Notes = new List<string>
+			{
+				"Assisted with administrative duties in the hall including on-call duty rotation",
+				"Followed up with students about facilities, personal, and academic issues"
+			}
+		};
+
+		private static Experience ResidentAssistant => new()
+		{
+			Company = "Western Illinois University Housing & Dining Services",
+			CompanyLocation = "Macomb, IL",
+			Position = "Resident Assistant",
+			EmploymentStart = new DateTime(2014, 8, 1),
+			EmploymentEnd = new DateTime(2017, 2, 19),
+			Notes = new List<string>
+			{
+				"Managed a cohesive residence hall living environment of 30-50 students each year",
+				"Served as a referral agent in matters of personal, academic, and career related issues"
+			}
+		};
 	}
 }
