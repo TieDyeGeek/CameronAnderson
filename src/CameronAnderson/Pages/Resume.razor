@@ -33,7 +33,9 @@ else
 			<div class="experience">
 				<div class="experience-heading">@experience.Position</div>
 				<div class="experience-date">@experience.EmploymentStart.ToString("Y") &mdash; @(experience.EmploymentEnd == null ? "Present" : experience.EmploymentEnd.Value.ToString("Y"))</div>
-				<div class="experience-subheading">@experience.Company &mdash; @experience.CompanyLocation</div>
+				<NavLink class="experience-subheading" href="@experience.Company.Link" target="_blank">
+					@experience.Company.Name &mdash; @experience.Company.Location
+				</NavLink>
 
 				<div class="notes">
 					@foreach (var note in experience.Notes)

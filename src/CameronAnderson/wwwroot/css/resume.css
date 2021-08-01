@@ -49,7 +49,9 @@
 
 .experience-subheading {
 	font-size: 1.5em;
+	display: block;
 	padding-left: 0.75em;
+	color: black;
 }
 
 .experience-note {

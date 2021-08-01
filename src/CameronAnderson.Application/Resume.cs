@@ -33,11 +33,17 @@ namespace CameronAnderson.Resume
 
 	public class Experience
 	{
-		public string Company { get; internal set; }
-		public string CompanyLocation { get; internal set; }
+		public Company Company { get; internal set; }
 		public string Position { get; internal set; }
 		public DateTime EmploymentStart { get; internal set; }
 		public DateTime? EmploymentEnd { get; internal set; }
 		public List<string> Notes { get; internal set; }
+	}
+
+	public class Company
+	{
+		public string Name { get; internal set; }
+		public string Location { get; internal set; }
+		public string Link { get; internal set; }
 	}
 }

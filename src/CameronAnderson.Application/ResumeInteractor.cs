@@ -92,8 +92,7 @@ namespace CameronAnderson.Resume
 	
 		private static Experience TechnicalArchitect => new()
 		{
-			Company = "CSE Software, Inc.",
-			CompanyLocation = "Peoria, IL",
+			Company = CSE,
 			Position = "Technical Architect",
 			EmploymentStart = new DateTime(2020, 12, 24),
 			EmploymentEnd = null,
@@ -110,8 +109,7 @@ namespace CameronAnderson.Resume
 
 		private static Experience Developer => new()
 		{
-			Company = "CSE Software, Inc.",
-			CompanyLocation = "Peoria, IL",
+			Company = CSE, 
 			Position = "Enterprise Software Developer",
 			EmploymentStart = new DateTime(2018, 11, 27),
 			EmploymentEnd = new DateTime(2020, 12, 24),
@@ -124,8 +122,7 @@ namespace CameronAnderson.Resume
 
 		private static Experience AssistantComplexDirector => new()
 		{
-			Company = "Western Illinois University Housing & Dining Services",
-			CompanyLocation = "Macomb, IL",
+			Company = UHDS,
 			Position = "Assistant Complex Director",
 			EmploymentStart = new DateTime(2017, 6, 1),
 			EmploymentEnd = new DateTime(2018, 5, 19),
@@ -139,8 +136,7 @@ namespace CameronAnderson.Resume
 
 		private static Experience CommunityCoordinator => new()
 		{
-			Company = "Western Illinois University Housing & Dining Services",
-			CompanyLocation = "Macomb, IL",
+			Company = UHDS,
 			Position = "Community Coordinator",
 			EmploymentStart = new DateTime(2017, 2, 19),
 			EmploymentEnd = new DateTime(2017, 6, 1),
@@ -153,8 +149,7 @@ namespace CameronAnderson.Resume
 
 		private static Experience ResidentAssistant => new()
 		{
-			Company = "Western Illinois University Housing & Dining Services",
-			CompanyLocation = "Macomb, IL",
+			Company = UHDS,
 			Position = "Resident Assistant",
 			EmploymentStart = new DateTime(2014, 8, 1),
 			EmploymentEnd = new DateTime(2017, 2, 19),
@@ -163,6 +158,20 @@ namespace CameronAnderson.Resume
 				"Managed a cohesive residence hall living environment of 30-50 students each year",
 				"Served as a referral agent in matters of personal, academic, and career related issues"
 			}
+		};
+
+		private static Company CSE => new()
+		{
+			Name = "CSE Software, Inc.",
+			Location = "Peoria, IL",
+			Link = "https://www.csesoftware.com/"
+		};
+
+		private static Company UHDS => new()
+		{
+			Name = "Western Illinois University Housing & Dining Services",
+			Location = "Macomb, IL",
+			Link = "https://www.wiu.edu/student_services/uhds/index.php"
 		};
 	}
 }
