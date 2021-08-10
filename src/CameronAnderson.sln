@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.31410.414
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CameronAnderson", "CameronAnderson\CameronAnderson.csproj", "{755701E7-4A43-4A82-9930-89B5F02CBB2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Resume", "CameronAnderson.Application\CameronAnderson.Resume.csproj", "{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CameronAnderson.Resume", "CameronAnderson.Resume\CameronAnderson.Resume.csproj", "{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Machine", "Enigma.Machine\Enigma.Machine.csproj", "{FF87A688-FC47-4975-9C0F-5318D28598A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enigma", "Enigma", "{5C36ED90-A3AD-409A-A5C7-8E106A194DA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Test", "Enigma.Test\Enigma.Test.csproj", "{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF87A688-FC47-4975-9C0F-5318D28598A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF87A688-FC47-4975-9C0F-5318D28598A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF87A688-FC47-4975-9C0F-5318D28598A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF87A688-FC47-4975-9C0F-5318D28598A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF87A688-FC47-4975-9C0F-5318D28598A6} = {5C36ED90-A3AD-409A-A5C7-8E106A194DA0}
+		{5FDB892D-7FEC-4DB4-AC76-7CDE35F48E83} = {5C36ED90-A3AD-409A-A5C7-8E106A194DA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D84BB057-5B09-437C-8CB0-64C117360841}
