@@ -1,0 +1,31 @@
+﻿@page "/fibonacci"
+
+<h1>Fibonacci Counter</h1>
+
+<p>Current number: @currentNumber</p>
+
+<button class="btn btn-primary" @onclick="GenerateNext">Click me</button>
+
+@code {
+	private List<ulong> fibonacci = new List<ulong> { 0 };
+		
+	private string currentNumber => maxReached 
+		? "Max ulong value reached" 
+		: fibonacci.Last().ToString("#,0");
+
+	private const decimal goldenRatio = 1.618033988m;
+
+	private bool maxReached => fibonacci.Last() > ulong.MaxValue / goldenRatio;
+
+	private void GenerateNext()
+	{
+		if (maxReached) return;
+
+		var lastTwo = fibonacci.ToArray().Reverse().Take(2);
+		var sum = lastTwo.First() + lastTwo.Last();
+
+		if (sum == 0) sum = 1; 
+
+		fibonacci.Add(sum);
+	}
+}
