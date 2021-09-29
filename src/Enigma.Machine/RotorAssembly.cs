@@ -15,6 +15,13 @@
 			_reflector = reflector;
 		}
  
+		public void SetPositions(int left, int middle, int right)
+		{
+			_left.Position = left;
+			_middle.Position = middle;
+			_right.Position = right;
+		}
+
 		public string EncodeText(string text)
 		{
 			string encodedText = "";
@@ -29,16 +36,15 @@
 
 		public char EncodeLetter(char letter)
 		{
-			var e = _right.Translate(letter);
-			e = _middle.Translate(e);
-			e = _left.Translate(e);
-			e = _reflector.Reflect(e);
-			e = _left.Translate(e);
-			e = _middle.Translate(e);
-			e = _right.Translate(e);
-
 			IncrementRotors();
 
+			var e = _right.Encode(letter);
+			e = _middle.Encode(e);
+			e = _left.Encode(e);
+			e = _reflector.Reflect(e);
+			e = _left.Decode(e);
+			e = _middle.Decode(e);
+			e = _right.Decode(e);
 			return e;
 		}
 

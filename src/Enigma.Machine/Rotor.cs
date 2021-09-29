@@ -1,50 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Enigma.Machine
 {
 	public class Rotor
 	{
-		private readonly Dictionary<char, char> _letters;
-		private int _position;
+		private readonly string _letters;
 		private readonly int _notchPosition;
 
 		public Rotor(string letters, int notchPosition)
 		{
 			_notchPosition = notchPosition;
-			_letters = new Dictionary<char, char>();
-			for (int i = 0; i < Constants.Alphabet.Length; i++)
-			{
-				_letters.Add(Constants.Alphabet[i], letters[i]);
-			}
+			_letters = letters;
 		}
 
 		/// <summary>
 		/// Zero-indexed position
 		/// </summary>
-		public int GetPosition() => _position;
+		public int Position { get; set; }
 
-		/// <summary>
-		/// Zero-indexed position
-		/// </summary>
-		public void SetPosition(int position)
+		public char Decode(char letter)
 		{
-			if (position >= _letters.Count || position < 0) throw new ArgumentException();
-
-			_position = position;
+			var index = Constants.Alphabet.IndexOf(letter);
+			return _letters[AdjustedForPosition(index)];
+		} 
+		
+		public char Encode(char letter)
+		{
+			var index = _letters.IndexOf(letter);
+			var afp = AdjustedForPosition(index);
+			return Constants.Alphabet[AdjustedForPosition(index)];
+			//var encodedLetter = Constants.Alphabet[AdjustedForPosition(index)];
+			//return Constants.Alphabet[AdjustedForPosition(
+				//Constants.Alphabet.IndexOf(encodedLetter))];
 		}
 
-		public char Translate(char letter)
-		{
-			return _letters[letter];
-		}
+		private int AdjustedForPosition(int index) => Math.Abs((index - Position) % _letters.Length);
 
 		public void Turn()
 		{
-			_position++;
-			_position %= _letters.Count;
+			Position++;
+			Position %= _letters.Length;
 		}
 
-		public bool WillTurnNextRotor() => _position == _notchPosition;
+		public bool WillTurnNextRotor() => Position == _notchPosition;
 	}
 }

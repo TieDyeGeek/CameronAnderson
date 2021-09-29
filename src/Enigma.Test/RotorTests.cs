@@ -1,51 +1,58 @@
 using Enigma.Machine;
-using System;
 using Xunit;
 
 namespace Enigma.Test
 {
 	public class RotorTests
 	{
-		[Fact]
-		public void SetPositionTest()
-		{
-			var rotor = GetRotor();
-			rotor.SetPosition(23);
-			Assert.Equal(23, rotor.GetPosition());
-		}
-
-		[Fact]
-		public void SetPositionTooHighTest()
-		{
-			var rotor = GetRotor();
-			Assert.Throws<ArgumentException>(() => rotor.SetPosition(26));
-		}
-
-		[Fact]
-		public void SetPositionTooLowTest()
-		{
-			var rotor = GetRotor();
-			Assert.Throws<ArgumentException>(() => rotor.SetPosition(-1));
-		}
+		private static Rotor Rotor = StandardRotor.I;
 
 		[Fact]
 		public void TurnTest()
 		{
-			var rotor = GetRotor();
-			rotor.SetPosition(24);
-			rotor.Turn();
-			Assert.Equal(25, rotor.GetPosition());
+			Rotor.Position = 24;
+			Rotor.Turn();
+			Assert.Equal(25, Rotor.Position);
 		}
 
 		[Fact]
 		public void TurnRolloverTest()
 		{
-			var rotor = GetRotor();
-			rotor.SetPosition(25);
-			rotor.Turn();
-			Assert.Equal(0, rotor.GetPosition());
+			Rotor.Position = 25;
+			Rotor.Turn();
+			Assert.Equal(0, Rotor.Position);
 		}
 
-		private Rotor GetRotor() => StandardRotor.I;
+		[Fact]
+		public void TranslatesBackToSameLetterTest()
+		{
+			var letter = Rotor.Encode('A');
+			Assert.NotEqual('A', letter);
+
+			var shouldBeA = Rotor.Decode(letter);
+			Assert.Equal('A', shouldBeA);
+		}
+
+		[Fact]
+		public void EncodeLetterTest()
+		{
+			var right = StandardRotor.III;
+			var middle = StandardRotor.II;
+			var left = StandardRotor.II;
+
+			right.Position = 10;
+			middle.Position = 25;
+			left.Position = 1;
+
+			var letter = right.Encode('H');
+			Assert.Equal('J', letter);
+
+			letter = middle.Encode(letter);
+			Assert.Equal('P', letter);
+
+			letter = left.Encode(letter);
+			Assert.Equal('Z', letter);
+		}
+
 	}
 }
