@@ -6,15 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="LoadingIcons\circle-circle.css" />
-    <Content Include="LoadingIcons\fibonacci.css" />
-    <Content Include="LoadingIcons\index.html" />
-    <Content Include="LoadingIcons\light-separated-triangle.css" />
-    <Content Include="LoadingIcons\loading.css" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="LoadingIcons\SquareCeption.razor" />
     <None Include="LoadingIcons\CircleCeption.razor" />
+    <None Include="LoadingIcons\CircleCircle.razor" />
+    <None Include="LoadingIcons\Fibonacci.razor" />
+    <None Include="LoadingIcons\LightSeparatedTriangle.razor" />
   </ItemGroup>
 
   <ItemGroup>

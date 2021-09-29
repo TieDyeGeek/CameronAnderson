@@ -1,0 +1,93 @@
+@page "/fibonacci"
+
+<style>
+	
+	.loading-container {
+		display: inline-block;
+		padding: 20px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.fibonacci-container {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		text-align: center;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+
+	.fibonacci-group {
+		display: inline;
+		position: absolute;
+	}
+
+	.fibonacci-1 {
+		transform: rotate(0deg);
+	}
+
+	.fibonacci-2 {
+		transform: rotate(120deg);
+	}
+
+	.fibonacci-3 {
+		transform: rotate(240deg);
+	}
+
+	.fibonacci {
+		fill: none;
+		fill-rule: nonzero;
+		stroke-width: 2px;
+		stroke: #ff2770;
+		stroke-dasharray: 75;
+
+			animation-name: fibonacci;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		transform-origin: 50% 50%;
+	}
+
+	@@keyframes fibonacci {
+		45% {
+			//transform: rotate(0);
+			stroke-dasharray: 30px;
+			stroke-dashoffset: 70px;
+			stroke: #50b9da;
+		}
+
+		50% { transform: rotate(720deg); }
+
+		55% {
+			stroke-dasharray: 30px;
+			stroke-dashoffset: 70px;
+			stroke: #50b9da;
+		}
+
+		100% { transform: rotate(-240deg); }
+	}
+
+</style>
+
+<div class="loading-container">
+	<div class="fibonacci-container">
+		<div class="fibonacci-group fibonacci-1">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;">
+				<path id="path1873" d="M0.139,61.784C0.139,38.479 19.322,19.302 42.636,19.302M68.901,45.558C68.901,31.154 57.044,19.302 42.636,19.302M52.67,61.784C61.574,61.784 68.901,54.459 68.901,45.558M42.636,51.753C42.636,57.256 47.165,61.784 52.67,61.784M42.636,51.753C42.636,48.355 45.433,45.558 48.833,45.558M52.67,49.393C52.67,47.289 50.938,45.558 48.833,45.558M52.67,49.393C52.67,50.688 51.604,51.753 50.309,51.753M48.833,50.278C48.833,51.087 49.499,51.753 50.309,51.753M48.833,50.278C48.833,49.793 49.233,49.393 49.718,49.393M50.309,49.983C50.309,49.66 50.042,49.393 49.718,49.393M50.309,49.983C50.309,50.145 50.175,50.278 50.014,50.278M49.719,49.983C49.719,50.145 49.852,50.278 50.014,50.278" class="fibonacci"/>
+			</svg>
+		</div>
+		<div class="fibonacci-group fibonacci-2">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;">
+				<path id="path1873" d="M0.139,61.784C0.139,38.479 19.322,19.302 42.636,19.302M68.901,45.558C68.901,31.154 57.044,19.302 42.636,19.302M52.67,61.784C61.574,61.784 68.901,54.459 68.901,45.558M42.636,51.753C42.636,57.256 47.165,61.784 52.67,61.784M42.636,51.753C42.636,48.355 45.433,45.558 48.833,45.558M52.67,49.393C52.67,47.289 50.938,45.558 48.833,45.558M52.67,49.393C52.67,50.688 51.604,51.753 50.309,51.753M48.833,50.278C48.833,51.087 49.499,51.753 50.309,51.753M48.833,50.278C48.833,49.793 49.233,49.393 49.718,49.393M50.309,49.983C50.309,49.66 50.042,49.393 49.718,49.393M50.309,49.983C50.309,50.145 50.175,50.278 50.014,50.278M49.719,49.983C49.719,50.145 49.852,50.278 50.014,50.278" class="fibonacci"/>
+			</svg>
+		</div>
+		<div class="fibonacci-group fibonacci-3">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;">
+				<path id="path1873" d="M0.139,61.784C0.139,38.479 19.322,19.302 42.636,19.302M68.901,45.558C68.901,31.154 57.044,19.302 42.636,19.302M52.67,61.784C61.574,61.784 68.901,54.459 68.901,45.558M42.636,51.753C42.636,57.256 47.165,61.784 52.67,61.784M42.636,51.753C42.636,48.355 45.433,45.558 48.833,45.558M52.67,49.393C52.67,47.289 50.938,45.558 48.833,45.558M52.67,49.393C52.67,50.688 51.604,51.753 50.309,51.753M48.833,50.278C48.833,51.087 49.499,51.753 50.309,51.753M48.833,50.278C48.833,49.793 49.233,49.393 49.718,49.393M50.309,49.983C50.309,49.66 50.042,49.393 49.718,49.393M50.309,49.983C50.309,50.145 50.175,50.278 50.014,50.278M49.719,49.983C49.719,50.145 49.852,50.278 50.014,50.278" class="fibonacci"/>
+			</svg>
+		</div>
+	</div>
+</div>
