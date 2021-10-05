@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CameronAnderson", "CameronA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CameronAnderson.Resume", "CameronAnderson.Resume\CameronAnderson.Resume.csproj", "{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selenium", "Selenium", "{8805FBAA-D9CD-4FFA-859A-24FB3E5826D8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Selenium", "CameronAnderson.Selenium\CameronAnderson.Selenium.csproj", "{4334ABCE-41FA-44E8-943A-E71951F35E63}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,16 +21,9 @@ Global
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5DF9021-D5D0-4EFE-B941-1447A11E82A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{4334ABCE-41FA-44E8-943A-E71951F35E63} = {8805FBAA-D9CD-4FFA-859A-24FB3E5826D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D84BB057-5B09-437C-8CB0-64C117360841}
