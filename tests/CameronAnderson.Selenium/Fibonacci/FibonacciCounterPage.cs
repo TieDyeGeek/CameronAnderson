@@ -6,10 +6,10 @@ namespace CameronAnderson.Selenium.Fibonacci
 {
 	public class FibonacciCounterPage : BasePage
 	{
-		[FindsBy(How = How.ClassName, Using = "btn-primary")]
+		[FindsBy(How.ClassName, "btn-primary")]
 		private IWebElement IncrementButton { get; set; }
 
-		[FindsBy(How = How.TagName, Using = "p")]
+		[FindsBy(How.TagName, "p")]
 		private IWebElement CurrentNumberLabel { get; set; }
 
 		public FibonacciCounterPage(IWebDriver driver) : base(driver)
