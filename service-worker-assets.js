@@ -29,7 +29,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-3A79JC2hgdwbWJNdqxiheXwAgE+vu1700a3cJJSMehk=",
+      "hash": "sha256-hKmcJf1nKR66vKT6g7gbOkW9Iql22W4dgwQMu\/nr1e0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -37,11 +37,11 @@
       "url": "_framework\/dotnet.6.0.0-rc.1.21451.13.js"
     },
     {
-      "hash": "sha256-fGLp9mtl9JC8GZoUukJEL6cNERGgufel9xF2VR9EJh4=",
+      "hash": "sha256-pMNvcRF88886VydI59A4Z2gyxs8oVcS4oFl64NK7Rkw=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
-      "hash": "sha256-IHIZaLNjc927yhhbUQh8uG3H1RTN6xongh5F8Le7D0I=",
+      "hash": "sha256-AY5ipVVpufF4HKAsFSh74BQrb6wkpqmCH\/sz5GVt+Gs=",
       "url": "_framework\/CameronAnderson.Resume.dll"
     },
     {
@@ -113,7 +113,7 @@
       "url": "_framework\/System.ComponentModel.dll"
     },
     {
-      "hash": "sha256-ho0bmwAHQVLisIhuLScCGgXYs2aA6aQErlp\/JEz+7u4=",
+      "hash": "sha256-mX7fLIA\/VvF6DlLzvysTwGAF6FAHljCr883Tm5ASxmc=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -129,7 +129,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-NkjX0+De8uzaG7Ky\/zDSDMSOfmC67ykOB9MgZJmRcEY=",
+      "hash": "sha256-b6Mqa+SZb31Ir6+v0ZHM+Ak1c+veiWIoo0xFHs1WAQU=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -145,8 +145,12 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-Dkog1HEhekjRMNGhIQWlnQQqV6as7Wv4VAVHWBs3iUc=",
+      "hash": "sha256-Fe9kPkTQjNKoDmeC4RZiBBwgrAFqOa28ybKBtHoxvm4=",
       "url": "_framework\/System.Runtime.dll"
+    },
+    {
+      "hash": "sha256-owaJagLHJsJW\/9uX3iJ5W7WidVU1XbnrIcysQZDEzes=",
+      "url": "_framework\/System.Runtime.Numerics.dll"
     },
     {
       "hash": "sha256-m9bT2x+B9O8W0RiY4RObIj24nk17mSX8HhorLB2I6nk=",
@@ -213,7 +217,7 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-jiyS5ONs1e8hgWbvWYas8JeVkMZC1sSjhFRqSCMTSYU=",
+      "hash": "sha256-3i+Hc8i7OOPsd6X1Hs\/Fli3O0dz8FN57bts4BNSZ\/t4=",
       "url": "css\/resume.css"
     },
     {
@@ -237,5 +241,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "r1nauPxL"
+  "version": "WeS2Y3dh"
 };
