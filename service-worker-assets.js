@@ -221,25 +221,17 @@
       "url": "css\/resume.css"
     },
     {
-      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
-      "url": "favicon.ico"
-    },
-    {
       "hash": "sha256-QArzzzFcgHhNmZxElF\/GFWkUMhMgPYW+tBVm9qt3dYA=",
       "url": "favicon.png"
-    },
-    {
-      "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
-      "url": "icon-512.png"
     },
     {
       "hash": "sha256-VX55\/AYC1QkZxzuO1cCyPHtvFmjJu9+aVfYYBfnKEBk=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-NufjorCVvJqdGISXgGhylqHy4ni+63Nfh80LPe0xxMI=",
+      "hash": "sha256-bs0pNmdnsqrYARB0p7j8jq9Y79Y+DZyVZGMk6ukdP+0=",
       "url": "manifest.json"
     }
   ],
-  "version": "WeS2Y3dh"
+  "version": "gLG6mHZQ"
 };
