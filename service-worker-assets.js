@@ -29,7 +29,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-fuLohgPLTCnIK5cV6SB\/zoLaVDlNHtMqksWxP008llU=",
+      "hash": "sha256-3A79JC2hgdwbWJNdqxiheXwAgE+vu1700a3cJJSMehk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -37,7 +37,7 @@
       "url": "_framework\/dotnet.6.0.0-rc.1.21451.13.js"
     },
     {
-      "hash": "sha256-hHBuM3Bwx990zFmDOikyIHYby5rr9jHq+uFL6ooCnS0=",
+      "hash": "sha256-fGLp9mtl9JC8GZoUukJEL6cNERGgufel9xF2VR9EJh4=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
@@ -173,10 +173,6 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-pGiRY2WKXUDy0uEK2V+MurPPK\/OWXATvZ5+pLnTKFPM=",
-      "url": "css\/LoadingIcons\/square-ception.css"
-    },
-    {
       "hash": "sha256-BnR5NW4M+k8aBtBMraeehX9emJpRQAFvBBmA0YdxyhU=",
       "url": "css\/map.css"
     },
@@ -241,5 +237,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "uR8gXh6f"
+  "version": "r1nauPxL"
 };

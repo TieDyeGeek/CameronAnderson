@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "CameronAnderson.dll": "sha256-hHBuM3Bwx990zFmDOikyIHYby5rr9jHq+uFL6ooCnS0=",
+      "CameronAnderson.dll": "sha256-fGLp9mtl9JC8GZoUukJEL6cNERGgufel9xF2VR9EJh4=",
       "CameronAnderson.Resume.dll": "sha256-IHIZaLNjc927yhhbUQh8uG3H1RTN6xongh5F8Le7D0I=",
       "Microsoft.AspNetCore.Components.dll": "sha256-Hm3JaUxjVzjqQTkubmM272\/lnb99t1AbNAb8BbdOiwk=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-QIx\/dJaKTv+cMnwsoE\/Enh0GiKWEdjc4s4es6cEX6E0=",
