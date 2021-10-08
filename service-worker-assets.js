@@ -29,7 +29,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-hKmcJf1nKR66vKT6g7gbOkW9Iql22W4dgwQMu\/nr1e0=",
+      "hash": "sha256-bzqAXSEigdPXRc0M0Aw6DktO\/+SNTAnhFTyxT6ByKts=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -37,7 +37,7 @@
       "url": "_framework\/dotnet.6.0.0-rc.1.21451.13.js"
     },
     {
-      "hash": "sha256-pMNvcRF88886VydI59A4Z2gyxs8oVcS4oFl64NK7Rkw=",
+      "hash": "sha256-I7oTFazL3R0Y\/JLB7PtWs\/BasDYQOG5iFU9v0sLZdNk=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
@@ -233,5 +233,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "gLG6mHZQ"
+  "version": "caPypGMC"
 };
