@@ -46,11 +46,6 @@ namespace CameronAnderson.Resume
 		{
 			new Link
 			{
-				Text = "cell",
-				Uri = @"tel:+1-309-231-7834"
-			},
-			new Link
-			{
 				Text = "email",
 				Uri = @"mailto:canderson3.14@me.com"
 			},
