@@ -5,7 +5,7 @@ namespace CameronAnderson.Selenium
 	public static class WebDriverExtensions
 	{
 		private const string Local = "https://localhost:5001/";
-		private const string Prod = "https://cameronanderson.info/";
+		private const string Prod = "https://cameronanderson.co/";
 
 		public static void GoToPage(this IWebDriver driver, string page)
 		{

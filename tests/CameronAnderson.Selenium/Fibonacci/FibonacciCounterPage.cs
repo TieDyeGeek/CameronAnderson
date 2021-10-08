@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
+using System.Numerics;
 using Xunit;
 
 namespace CameronAnderson.Selenium.Fibonacci
@@ -29,26 +30,20 @@ namespace CameronAnderson.Selenium.Fibonacci
 			return this;
 		}
 
-		public FibonacciCounterPage VerifyNumberIs(ulong expectedValue)
+		public FibonacciCounterPage VerifyNumberIs(BigInteger expectedValue)
 		{
 			Assert.Equal(expectedValue, GetCurrentNumber());
 			return this;
 		}
 
-		private ulong? GetCurrentNumber()
+		private BigInteger? GetCurrentNumber()
 		{
-			var isNumber = ulong.TryParse(CurrentNumberLabel.Text
+			var isNumber = BigInteger.TryParse(CurrentNumberLabel.Text
 				.Replace("Current number: ", "")
 				.Replace(",", "")
 				, out var number);
 
 			return isNumber ? number : null;
-		}
-
-		public FibonacciCounterPage VerifyNumberIsMax()
-		{
-			Assert.Equal("Current number: Max ulong value reached", CurrentNumberLabel.Text);
-			return this;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿@page "/fibonacci"
+@using System.Numerics
 
 <h1>Fibonacci Counter</h1>
 
@@ -7,24 +8,12 @@
 <button class="btn btn-primary" @onclick="GenerateNext">Click me</button>
 
 @code {
-	private List<ulong> fibonacci = new List<ulong> { 0 };
+	private List<BigInteger> fibonacci = new List<BigInteger> { 0 };
 		
-	private string currentNumber => maxReached 
-		? "Max ulong value reached" 
-		: fibonacci.Last().ToString("#,0");
-
-	private bool maxReached => SecondToLastNumber > ulong.MaxValue / goldenRatio;
-
-	private ulong SecondToLastNumber => fibonacci.ToArray()
-		.Reverse().Skip(1).Take(1).FirstOrDefault();
-
-	private const decimal goldenRatio = 1.618033988m;
-
+	private string currentNumber => fibonacci.Last().ToString("#,0");
 
 	private void GenerateNext()
 	{
-		if (maxReached) return;
-
 		var lastTwo = fibonacci.ToArray().Reverse().Take(2);
 		var sum = lastTwo.First() + lastTwo.Last();
 
