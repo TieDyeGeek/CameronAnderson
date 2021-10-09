@@ -10,7 +10,6 @@
     <None Include="LoadingIcons\CircleCeption.razor" />
     <None Include="LoadingIcons\CircleCircle.razor" />
     <None Include="LoadingIcons\Fibonacci.razor" />
-    <None Include="LoadingIcons\LightSeparatedTriangle.razor" />
   </ItemGroup>
 
   <ItemGroup>
