@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="LoadingIcons\LightSeparatedTriangle.razor" />
     <None Include="LoadingIcons\SquareCeption.razor" />
     <None Include="LoadingIcons\CircleCeption.razor" />
     <None Include="LoadingIcons\CircleCircle.razor" />
