@@ -1,3 +1,4 @@
+using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
 using System.Collections.Generic;
 using System.Numerics;
@@ -8,9 +9,9 @@ namespace CameronAnderson.Selenium.Fibonacci
 	public class FibonacciTests
 	{
 		[Fact]
-		public void Test1()
+		public void First1000Numbers()
 		{
-			var driver = new EdgeDriver();
+			var driver = GetDriver();
 			var numbers = First1000FibonacciNumbers();
 			var page = FibonacciCounterPage.Load(driver);
 
@@ -21,6 +22,17 @@ namespace CameronAnderson.Selenium.Fibonacci
 			}
 
 			driver.Quit();
+		}
+
+		private IWebDriver GetDriver()
+		{
+			var options = new EdgeOptions();
+
+#if BUILDSERVER
+			options.AddArgument("headless");
+#endif
+
+			return new EdgeDriver(options);
 		}
 
 		private static List<BigInteger> First1000FibonacciNumbers()

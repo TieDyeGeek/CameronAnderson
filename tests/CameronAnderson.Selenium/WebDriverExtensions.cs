@@ -9,7 +9,13 @@ namespace CameronAnderson.Selenium
 
 		public static void GoToPage(this IWebDriver driver, string page)
 		{
-			driver.Navigate().GoToUrl(Local + page);
+			var baseUrl = Local;
+
+#if BUILDSERVER
+			baseUrl = Prod;
+#endif
+
+			driver.Navigate().GoToUrl(baseUrl + page);
 		}
 	}
 }
