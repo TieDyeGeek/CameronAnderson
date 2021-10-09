@@ -15,10 +15,6 @@
 	text-align: center;
 	vertical-align: middle;
 	overflow: visible;
-	padding-top: 30px;
-	padding-bottom: 10px;
-	padding-left: 30px;
-	padding-right: 10px;
 }
 
 .circle-ception[b-93x0r8r2ps] {
@@ -413,7 +409,6 @@
 }
 
 .fibonacci-group[b-3o1m7xoexg] {
-	display: inline;
 	position: absolute;
 }
 
@@ -556,13 +551,10 @@
 	text-align: center;
 	vertical-align: middle;
 	overflow: visible;
-	padding-top: 30px;
-	padding-bottom: 10px;
 }
 
 .square-ception[b-p3d2y3bv42] {
-	margin: auto;
-	margin-top: 6px;
+	margin: 5px;
 	border-color: white;
 	border-width: 2px;
 	border-style: solid;
@@ -718,6 +710,42 @@
 
 .notes[b-qhtqbni4jp] {
 	padding-left: 1.5em;
+}
+/* /Shared/LoadingIconCard.razor.rz.scp.css */
+.li-card[b-chkpt3c3ln] {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	border: solid;
+	border-color: black;
+	border-radius: 25px;
+	max-width: 750px;
+}
+
+.li-title[b-chkpt3c3ln] {
+	display: inline-block;
+	font-size: 2em;
+	vertical-align: middle;
+	width: 60%;
+	min-width: 300px;
+}
+
+.li-title-left[b-chkpt3c3ln] {
+	text-align: left;
+}
+
+.li-title-right[b-chkpt3c3ln] {
+	text-align: right;
+	padding-right: 30px;
+}
+
+.loading-icon[b-chkpt3c3ln] {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40%;
+	min-width: 200px;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-asng8nkymd] {
