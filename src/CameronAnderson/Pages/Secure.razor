@@ -1,0 +1,29 @@
+﻿@page "/secure"
+@using CameronAnderson.Secure
+@inject IAuthorize Authorizer
+
+
+<h1>Secure Page</h1>
+
+@if (IsAuthorized)
+{
+	<h2>Congrats! You got through my security!</h2>	
+}
+else
+{
+	<input @bind="Password"/>
+	<button class="btn btn-primary" @onclick="Authorize">Authorize</button>
+}
+
+
+@code {
+
+	public bool IsAuthorized { get; set; }
+	public string Password { get; set; }
+
+	private void Authorize()
+	{
+		IsAuthorized = Authorizer.CanAccess(Password);
+		Password = "";
+	}
+}
