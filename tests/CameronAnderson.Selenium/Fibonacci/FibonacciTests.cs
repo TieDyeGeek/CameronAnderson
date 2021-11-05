@@ -24,6 +24,17 @@ namespace CameronAnderson.Selenium.Fibonacci
 			driver.Quit();
 		}
 
+		[Fact]
+		public void TranslationTest()
+		{
+			var driver = GetDriver();
+
+			FibonacciCounterPage.Load(driver)
+				.VerifyTranslations();
+
+			driver.Quit();
+		}
+
 		private IWebDriver GetDriver()
 		{
 			var options = new EdgeOptions();

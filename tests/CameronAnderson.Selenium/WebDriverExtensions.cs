@@ -9,7 +9,7 @@ namespace CameronAnderson.Selenium
 
 		public static void GoToPage(this IWebDriver driver, string page)
 		{
-			var baseUrl = Local;
+			var baseUrl = Prod;
 
 #if BUILDSERVER
 			baseUrl = Prod;

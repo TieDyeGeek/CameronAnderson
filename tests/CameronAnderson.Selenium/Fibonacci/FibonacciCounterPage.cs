@@ -1,14 +1,20 @@
-﻿using OpenQA.Selenium;
+﻿using CameronAnderson.Selenium.Translations;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System.Numerics;
 using Xunit;
 
 namespace CameronAnderson.Selenium.Fibonacci
 {
-	public class FibonacciCounterPage : BasePage
+	public class FibonacciCounterPage : BasePage<FibonacciCounterPage>
 	{
+		[TranslationKey("asdf")]
 		[FindsBy(How.ClassName, "btn-primary")]
 		private IWebElement IncrementButton { get; set; }
+
+		[TranslationKey("jkl;")]
+		[FindsBy(How.TagName, "h1")]
+		private IWebElement Title {  get; set; }
 
 		[FindsBy(How.TagName, "p")]
 		private IWebElement CurrentNumberLabel { get; set; }
