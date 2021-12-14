@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="LoadingIcons\LightSeparatedTriangle.razor" />
-    <None Include="LoadingIcons\SquareCeption.razor" />
-    <None Include="LoadingIcons\CircleCeption.razor" />
-    <None Include="LoadingIcons\CircleCircle.razor" />
-    <None Include="LoadingIcons\Fibonacci.razor" />
+    <None Include="Pages\LoadingIcons\LightSeparatedTriangle.razor" />
+    <None Include="Pages\LoadingIcons\SquareCeption.razor" />
+    <None Include="Pages\LoadingIcons\CircleCeption.razor" />
+    <None Include="Pages\LoadingIcons\CircleCircle.razor" />
+    <None Include="Pages\LoadingIcons\Fibonacci.razor" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CameronAnderson.Restaurants\CameronAnderson.Restaurants.csproj" />
     <ProjectReference Include="..\CameronAnderson.Resume\CameronAnderson.Resume.csproj" />
   </ItemGroup>
 

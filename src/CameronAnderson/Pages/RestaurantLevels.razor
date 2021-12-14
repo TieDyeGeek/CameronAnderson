@@ -1,0 +1,44 @@
+﻿@page "/RestaurantLevels"
+@using CameronAnderson.Restaurants
+
+<h1>Restaurant Levels</h1>
+
+@if (restaurants == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<p>Level 1:  Fast Food (order at front)</p>
+	<p>Level 1.5:  Semi-Fast Food</p>
+	<p>Level 2:  Mom & Pops / Sports Bas ("sit downs")</p>
+	<p>Level 3:  Full Sit Downs (no TVs)</p>
+	<p>Level 4:  Fancy (specialty items; focus)</p>
+	<br />
+	<br />
+
+	@foreach (var level in restaurants
+							.Select(x => x.Level)
+							.Distinct()
+							.OrderBy(x => x))
+	{
+		<h3>Level @level:</h3>
+		@foreach (var restaurant in restaurants
+							.Where(x => x.Level.Equals(level))
+							.OrderBy(x => x.Name))
+		{
+			<ul>@restaurant.Name</ul>
+		}
+		<br />
+	}
+}
+
+@code
+{
+	private List<CameronAnderson.Restaurants.Restaurant> restaurants { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		restaurants = RestaurantInteractor.GetRestaurants();
+	}
+}
