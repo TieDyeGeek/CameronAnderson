@@ -1,5 +1,5 @@
-/* /LoadingIcons/CircleCeption.razor.rz.scp.css */
-.loading-container[b-93x0r8r2ps] {
+/* /Pages/LoadingIcons/CircleCeption.razor.rz.scp.css */
+.loading-container[b-dpci5b11ba] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -8,7 +8,7 @@
 	vertical-align: middle;
 }
 
-.circle-ception-container[b-93x0r8r2ps] {
+.circle-ception-container[b-dpci5b11ba] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -17,7 +17,7 @@
 	overflow: visible;
 }
 
-.circle-ception[b-93x0r8r2ps] {
+.circle-ception[b-dpci5b11ba] {
 	position: absolute;
 	margin: auto;
 	background-color: #0af;
@@ -30,7 +30,7 @@
 	animation-timing-function: ease-in-out;
 }
 
-.circle-ception-cover[b-93x0r8r2ps] {
+.circle-ception-cover[b-dpci5b11ba] {
 	width: 100%;
 	height: 50%;
 	margin-top: 50%;
@@ -41,117 +41,117 @@
 	background-color: white;
 }
 
-.circle-ception-layer-8[b-93x0r8r2ps] {
-	animation-name: circle-ception-8-b-93x0r8r2ps;
+.circle-ception-layer-8[b-dpci5b11ba] {
+	animation-name: circle-ception-8-b-dpci5b11ba;
 	width: 128px;
 	height: 128px;
 }
 
-.circle-ception-layer-7[b-93x0r8r2ps] {
-	animation-name: circle-ception-7-b-93x0r8r2ps;
+.circle-ception-layer-7[b-dpci5b11ba] {
+	animation-name: circle-ception-7-b-dpci5b11ba;
 	width: 112px;
 	height: 112px;
 	margin-left: 8px;
 	margin-top: 8px;
 }
 
-.circle-ception-layer-6[b-93x0r8r2ps] {
-	animation-name: circle-ception-6-b-93x0r8r2ps;
+.circle-ception-layer-6[b-dpci5b11ba] {
+	animation-name: circle-ception-6-b-dpci5b11ba;
 	width: 96px;
 	height: 96px;
 	margin-left: 16px;
 	margin-top: 16px;
 }
 
-.circle-ception-layer-5[b-93x0r8r2ps] {
-	animation-name: circle-ception-5-b-93x0r8r2ps;
+.circle-ception-layer-5[b-dpci5b11ba] {
+	animation-name: circle-ception-5-b-dpci5b11ba;
 	width: 80px;
 	height: 80px;
 	margin-left: 24px;
 	margin-top: 24px;
 }
 
-.circle-ception-layer-4[b-93x0r8r2ps] {
-	animation-name: circle-ception-4-b-93x0r8r2ps;
+.circle-ception-layer-4[b-dpci5b11ba] {
+	animation-name: circle-ception-4-b-dpci5b11ba;
 	width: 64px;
 	height: 64px;
 	margin-left: 32px;
 	margin-top: 32px;
 }
 
-.circle-ception-layer-3[b-93x0r8r2ps] {
-	animation-name: circle-ception-3-b-93x0r8r2ps;
+.circle-ception-layer-3[b-dpci5b11ba] {
+	animation-name: circle-ception-3-b-dpci5b11ba;
 	width: 48px;
 	height: 48px;
 	margin-left: 40px;
 	margin-top: 40px;
 }
 
-.circle-ception-layer-2[b-93x0r8r2ps] {
-	animation-name: circle-ception-2-b-93x0r8r2ps;
+.circle-ception-layer-2[b-dpci5b11ba] {
+	animation-name: circle-ception-2-b-dpci5b11ba;
 	width: 32px;
 	height: 32px;
 	margin-left: 48px;
 	margin-top: 48px;
 }
 
-.circle-ception-layer-1[b-93x0r8r2ps] {
-	animation-name: circle-ception-1-b-93x0r8r2ps;
+.circle-ception-layer-1[b-dpci5b11ba] {
+	animation-name: circle-ception-1-b-dpci5b11ba;
 	width: 16px;
 	height: 16px;
 	margin-left: 56px;
 	margin-top: 56px;
 }
 
-@keyframes circle-ception-8-b-93x0r8r2ps {
+@keyframes circle-ception-8-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(2880deg); }
 }
 
-@keyframes circle-ception-7-b-93x0r8r2ps {
+@keyframes circle-ception-7-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(2520deg); }
 }
 
-@keyframes circle-ception-6-b-93x0r8r2ps {
+@keyframes circle-ception-6-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(2160deg); }
 }
 
-@keyframes circle-ception-5-b-93x0r8r2ps {
+@keyframes circle-ception-5-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(1800deg); }
 }
 
-@keyframes circle-ception-4-b-93x0r8r2ps {
+@keyframes circle-ception-4-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(1440deg); }
 }
 
-@keyframes circle-ception-3-b-93x0r8r2ps {
+@keyframes circle-ception-3-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(1080deg); }
 }
 
-@keyframes circle-ception-2-b-93x0r8r2ps {
+@keyframes circle-ception-2-b-dpci5b11ba {
 	0% { transform: rotate(0deg); } 
 	50% { background-color: magenta; }
 	100% { transform: rotate(720deg); }
 }
 
-@keyframes circle-ception-1-b-93x0r8r2ps {
+@keyframes circle-ception-1-b-dpci5b11ba {
 	0% { transform: rotate(0deg); }
 	50% { background-color: magenta; }
 	100% { transform: rotate(360deg); }
 }
-/* /LoadingIcons/CircleCircle.razor.rz.scp.css */
-.loading-container[b-ed43k9uy8j] {
+/* /Pages/LoadingIcons/CircleCircle.razor.rz.scp.css */
+.loading-container[b-bznn5cvrxe] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -160,7 +160,7 @@
 	vertical-align: middle;
 }
 
-.circle-circle-container[b-ed43k9uy8j] {
+.circle-circle-container[b-bznn5cvrxe] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -169,92 +169,92 @@
 	overflow: visible;
 }
 
-.cc-outer-circle[b-ed43k9uy8j] {
+.cc-outer-circle[b-bznn5cvrxe] {
 	fill: #00f;
 }
 
-.cc-inner-circle[b-ed43k9uy8j] {
+.cc-inner-circle[b-bznn5cvrxe] {
 	fill: #f00;
-	animation-name: circle-circle-b-ed43k9uy8j;
+	animation-name: circle-circle-b-bznn5cvrxe;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-.cc-inner-line[b-ed43k9uy8j] {
+.cc-inner-line[b-bznn5cvrxe] {
 	fill: none;
 	stroke: #fff;
 	stroke-miterlimit: 10;
 	stroke-width: 1.5px;
 }
 
-.circle-circle[b-ed43k9uy8j] {
+.circle-circle[b-bznn5cvrxe] {
 	transform-origin: 50px 50px;
 }
 
-.cc-2[b-ed43k9uy8j] {
+.cc-2[b-bznn5cvrxe] {
 	transform: rotate(22.5deg);
 }
 
-.cc-3[b-ed43k9uy8j] {
+.cc-3[b-bznn5cvrxe] {
 	transform: rotate(45deg);
 }
 
-.cc-4[b-ed43k9uy8j] {
+.cc-4[b-bznn5cvrxe] {
 	transform: rotate(67.5deg);
 }
 
-.cc-5[b-ed43k9uy8j] {
+.cc-5[b-bznn5cvrxe] {
 	transform: rotate(90deg);
 }
 
-.cc-6[b-ed43k9uy8j] {
+.cc-6[b-bznn5cvrxe] {
 	transform: rotate(112.5deg);
 }
 
-.cc-7[b-ed43k9uy8j] {
+.cc-7[b-bznn5cvrxe] {
 	transform: rotate(135deg);
 }
 
-.cc-8[b-ed43k9uy8j] {
+.cc-8[b-bznn5cvrxe] {
 	transform: rotate(157.5deg);
 }
 
-.cc-circle-2[b-ed43k9uy8j] {
+.cc-circle-2[b-bznn5cvrxe] {
 	animation-delay: 0.25s;
 }
 
-.cc-circle-3[b-ed43k9uy8j] {
+.cc-circle-3[b-bznn5cvrxe] {
 	animation-delay: 0.5s;
 }
 
-.cc-circle-4[b-ed43k9uy8j] {
+.cc-circle-4[b-bznn5cvrxe] {
 	animation-delay: 0.75s;
 }
 
-.cc-circle-5[b-ed43k9uy8j] {
+.cc-circle-5[b-bznn5cvrxe] {
 	animation-delay: 1s;
 }
 
-.cc-circle-6[b-ed43k9uy8j] {
+.cc-circle-6[b-bznn5cvrxe] {
 	animation-delay: 1.25s;
 }
 
-.cc-circle-7[b-ed43k9uy8j] {
+.cc-circle-7[b-bznn5cvrxe] {
 	animation-delay: 1.5s;
 }
 
-.cc-circle-8[b-ed43k9uy8j] {
+.cc-circle-8[b-bznn5cvrxe] {
 	animation-delay: 1.75s;
 }
 
-@keyframes circle-circle-b-ed43k9uy8j {
+@keyframes circle-circle-b-bznn5cvrxe {
 	0% { transform: translateX(0); fill: #f0f; }
 	50% { transform: translateX(90px); fill: #ff0; }
 	100% { transform: translateX(0); fill: #f0f; }
 }
-/* /LoadingIcons/DumpTruck.razor.rz.scp.css */
-.loading-container[b-7paocjmp7a] {
+/* /Pages/LoadingIcons/DumpTruck.razor.rz.scp.css */
+.loading-container[b-z87p35g41n] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -263,7 +263,7 @@
 	vertical-align: middle;
 }
 
-.dump-truck-container[b-7paocjmp7a] {
+.dump-truck-container[b-z87p35g41n] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -272,96 +272,96 @@
 	overflow: visible;
 }
 
-.dump-truck[b-7paocjmp7a] {
+.dump-truck[b-z87p35g41n] {
 	padding-top: 15px;
 	overflow: visible;
 }
 
-.dump-truck-wheel[b-7paocjmp7a] {
-	animation-name: dump-truck-wheel-b-7paocjmp7a;
+.dump-truck-wheel[b-z87p35g41n] {
+	animation-name: dump-truck-wheel-b-z87p35g41n;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease;
 }
 
-.dump-truck-wheel-left[b-7paocjmp7a] {
+.dump-truck-wheel-left[b-z87p35g41n] {
 	transform-origin: 345px 421px;
 }
 
-.dump-truck-wheel-right[b-7paocjmp7a] {
+.dump-truck-wheel-right[b-z87p35g41n] {
 	transform-origin: 870px 421px;
 }
 
-.dump-truck-bed[b-7paocjmp7a] {
-	animation-name: dump-truck-bed-b-7paocjmp7a;
+.dump-truck-bed[b-z87p35g41n] {
+	animation-name: dump-truck-bed-b-z87p35g41n;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	transform-origin: 600px 450px;
 }
 
-.dump-truck-yellow[b-7paocjmp7a] {
+.dump-truck-yellow[b-z87p35g41n] {
 	fill: #feb600;
 }
 
-.dump-truck-shaddow-1[b-7paocjmp7a] {
+.dump-truck-shaddow-1[b-z87p35g41n] {
 	fill: #e79300;
 }
 
-.dump-truck-shaddow-2[b-7paocjmp7a] {
+.dump-truck-shaddow-2[b-z87p35g41n] {
 	fill: #c37000;
 }
 
-.dump-truck-glass[b-7paocjmp7a] {
+.dump-truck-glass[b-z87p35g41n] {
 	fill: #3cf;
 }
 
-.dump-truck-rail[b-7paocjmp7a] {
+.dump-truck-rail[b-z87p35g41n] {
 	fill: none;
 	stroke: #333;
 	stroke-miterlimit: 10;
 	stroke-width: 8.5px;
 }
 
-.dump-truck-tire[b-7paocjmp7a] {
+.dump-truck-tire[b-z87p35g41n] {
 	fill: #333;
 }
 
-.circle[b-7paocjmp7a] {
+.circle[b-z87p35g41n] {
 	border-radius: 50%;
 }
 
-.boulders[b-7paocjmp7a] {
+.boulders[b-z87p35g41n] {
 	position: absolute;
 	padding-left: 35px;
 	z-index: -1;
-	animation-name: boulder-falling-b-7paocjmp7a;
+	animation-name: boulder-falling-b-z87p35g41n;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in;
 }
 
-.boulders-1[b-7paocjmp7a] {
+.boulders-1[b-z87p35g41n] {
 	animation-delay: -0.1s;
 }
 
-.boulders-2[b-7paocjmp7a] {
+.boulders-2[b-z87p35g41n] {
 	animation-delay: 0.25s;
 }
 
-.boulder-1[b-7paocjmp7a] {
+.boulder-1[b-z87p35g41n] {
 	fill: #944c00;
 }
 
-.boulder-2[b-7paocjmp7a] {
+.boulder-2[b-z87p35g41n] {
 	fill: #ab6400;
 }
 
-.boulder-3[b-7paocjmp7a] {
+.boulder-3[b-z87p35g41n] {
 	fill: #7c3100;
 }
 
-@keyframes dump-truck-wheel-b-7paocjmp7a {
+@keyframes dump-truck-wheel-b-z87p35g41n {
 	0% { transform: rotate(0deg); }
 	15% { transform: rotate(0deg); }
 	50% { transform: rotate(720deg); }
@@ -369,7 +369,7 @@
 	100% { transform: rotate(810deg); }
 }
 
-@keyframes dump-truck-bed-b-7paocjmp7a {
+@keyframes dump-truck-bed-b-z87p35g41n {
 	0% { transform: rotate(0deg); }
 	50% { transform: rotate(0deg); }
 	70% { transform: rotate(-20deg); }
@@ -378,7 +378,7 @@
 	100% { transform: rotate(0deg); }
 }
 
-@keyframes boulder-falling-b-7paocjmp7a {
+@keyframes boulder-falling-b-z87p35g41n {
 	0% { transform: translate(0px,-60px); opacity: 0; }
 	5% { transform: translate(0px,-60px); opacity: 0; }
 	7% { opacity: 1; }
@@ -389,8 +389,8 @@
 	80% { transform: translate(-100px,65px); }
 	100% { opacity: 0; }
 }
-/* /LoadingIcons/Fibonacci.razor.rz.scp.css */
-.loading-container[b-3o1m7xoexg] {
+/* /Pages/LoadingIcons/Fibonacci.razor.rz.scp.css */
+.loading-container[b-x57pfrhhso] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -399,7 +399,7 @@
 	vertical-align: middle;
 }
 
-.fibonacci-container[b-3o1m7xoexg] {
+.fibonacci-container[b-x57pfrhhso] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -408,36 +408,36 @@
 	overflow: hidden;
 }
 
-.fibonacci-group[b-3o1m7xoexg] {
+.fibonacci-group[b-x57pfrhhso] {
 	position: absolute;
 }
 
-.fibonacci-1[b-3o1m7xoexg] {
+.fibonacci-1[b-x57pfrhhso] {
 	transform: rotate(0deg);
 }
 
-.fibonacci-2[b-3o1m7xoexg] {
+.fibonacci-2[b-x57pfrhhso] {
 	transform: rotate(120deg);
 }
 
-.fibonacci-3[b-3o1m7xoexg] {
+.fibonacci-3[b-x57pfrhhso] {
 	transform: rotate(240deg);
 }
 
-.fibonacci[b-3o1m7xoexg] {
+.fibonacci[b-x57pfrhhso] {
 	fill: none;
 	fill-rule: nonzero;
 	stroke-width: 2px;
 	stroke: #ff2770;
 	stroke-dasharray: 75;
-	animation-name: fibonacci-b-3o1m7xoexg;
+	animation-name: fibonacci-b-x57pfrhhso;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	transform-origin: 50% 50%;
 }
 
-@keyframes fibonacci-b-3o1m7xoexg {
+@keyframes fibonacci-b-x57pfrhhso {
 	45% {
 		transform: rotate(0);
 		stroke-dasharray: 30px;
@@ -459,8 +459,8 @@
 		transform: rotate(-240deg);
 	}
 }
-/* /LoadingIcons/LightSeparatedTriangle.razor.rz.scp.css */
-.loading-container[b-rtqayzrhfh] {
+/* /Pages/LoadingIcons/LightSeparatedTriangle.razor.rz.scp.css */
+.loading-container[b-ugjivqsppy] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -469,7 +469,7 @@
 	vertical-align: middle;
 }
 
-.animation-container[b-rtqayzrhfh] {
+.animation-container[b-ugjivqsppy] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -478,11 +478,11 @@
 	border-radius: 25px;
 }
 
-.dark-background[b-rtqayzrhfh] {
+.dark-background[b-ugjivqsppy] {
 	background-color: #000;
 }
 
-.triangle[b-rtqayzrhfh] {
+.triangle[b-ugjivqsppy] {
 	width: 0;
 	height: 0;
 	border-top: 67px solid blue;
@@ -492,33 +492,33 @@
 	transform-origin: 50% 100%;
 	margin-left: 35px;
 	margin-top: 8px;
-	animation-name: light-separated-triangle-b-rtqayzrhfh;
+	animation-name: light-separated-triangle-b-ugjivqsppy;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-.triangle-1[b-rtqayzrhfh] {
+.triangle-1[b-ugjivqsppy] {
 	border-top: 67px solid rgba(255, 255, 255, 1);
 	animation-delay: 0s;
 }
 
-.triangle-2[b-rtqayzrhfh] {
+.triangle-2[b-ugjivqsppy] {
 	border-top: 67px solid rgba(255, 0, 255, 0.4);
 	animation-delay: 0.1s;
 }
 
-.triangle-3[b-rtqayzrhfh] {
+.triangle-3[b-ugjivqsppy] {
 	border-top: 67px solid rgba(255, 255, 0, 0.4);
 	animation-delay: 0.15s;
 }
 
-.triangle-4[b-rtqayzrhfh] {
+.triangle-4[b-ugjivqsppy] {
 	border-top: 67px solid rgba(0, 255, 255, 0.4);
 	animation-delay: 0.2s;
 }
 
-@keyframes light-separated-triangle-b-rtqayzrhfh {
+@keyframes light-separated-triangle-b-ugjivqsppy {
 	0% { transform: rotate(0deg); }
 	1% { transform: rotate(0deg); }
 	16% { transform: rotate(60deg); }
@@ -534,8 +534,8 @@
 	99% { transform: rotate(360deg); }
 	100% { transform: rotate(360deg); }
 }
-/* /LoadingIcons/LoadingIconCard.razor.rz.scp.css */
-.li-card[b-w2li8g8pnk] {
+/* /Pages/LoadingIcons/LoadingIconCard.razor.rz.scp.css */
+.li-card[b-gjuym5uy9m] {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	margin-left: auto;
@@ -547,7 +547,7 @@
 	max-width: 750px;
 }
 
-.li-title[b-w2li8g8pnk] {
+.li-title[b-gjuym5uy9m] {
 	display: inline-block;
 	font-size: 2em;
 	vertical-align: middle;
@@ -555,23 +555,23 @@
 	min-width: 300px;
 }
 
-.li-title-left[b-w2li8g8pnk] {
+.li-title-left[b-gjuym5uy9m] {
 	text-align: left;
 }
 
-.li-title-right[b-w2li8g8pnk] {
+.li-title-right[b-gjuym5uy9m] {
 	text-align: right;
 	padding-right: 30px;
 }
 
-.loading-icon[b-w2li8g8pnk] {
+.loading-icon[b-gjuym5uy9m] {
 	display: inline-block;
 	vertical-align: middle;
 	width: 40%;
 	min-width: 200px;
 }
-/* /LoadingIcons/SquareCeption.razor.rz.scp.css */
-.loading-container[b-p3d2y3bv42] {
+/* /Pages/LoadingIcons/SquareCeption.razor.rz.scp.css */
+.loading-container[b-bz1cz4xzky] {
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -580,7 +580,7 @@
 	vertical-align: middle;
 }
 
-.square-ception-container[b-p3d2y3bv42] {
+.square-ception-container[b-bz1cz4xzky] {
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -589,59 +589,59 @@
 	overflow: visible;
 }
 
-.square-ception[b-p3d2y3bv42] {
+.square-ception[b-bz1cz4xzky] {
 	margin: 5px;
 	border-color: white;
 	border-width: 2px;
 	border-style: solid;
-	animation-name: square-ception-b-p3d2y3bv42;
+	animation-name: square-ception-b-bz1cz4xzky;
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-.square-ception-layer-8[b-p3d2y3bv42] {
+.square-ception-layer-8[b-bz1cz4xzky] {
 	width: 120px;
 	height: 120px;
 	margin-top: 0;
 }
 
-.square-ception-layer-7[b-p3d2y3bv42] {
+.square-ception-layer-7[b-bz1cz4xzky] {
 	width: 105px;
 	height: 105px;
 }
 
-.square-ception-layer-6[b-p3d2y3bv42] {
+.square-ception-layer-6[b-bz1cz4xzky] {
 	width: 90px;
 	height: 90px;
 }
 
-.square-ception-layer-5[b-p3d2y3bv42] {
+.square-ception-layer-5[b-bz1cz4xzky] {
 	width: 75px;
 	height: 75px;
 }
 
-.square-ception-layer-4[b-p3d2y3bv42] {
+.square-ception-layer-4[b-bz1cz4xzky] {
 	width: 60px;
 	height: 60px;
 }
 
-.square-ception-layer-3[b-p3d2y3bv42] {
+.square-ception-layer-3[b-bz1cz4xzky] {
 	width: 45px;
 	height: 45px;
 }
 
-.square-ception-layer-2[b-p3d2y3bv42] {
+.square-ception-layer-2[b-bz1cz4xzky] {
 	width: 30px;
 	height: 30px;
 }
 
-.square-ception-layer-1[b-p3d2y3bv42] {
+.square-ception-layer-1[b-bz1cz4xzky] {
 	width: 15px;
 	height: 15px;
 }
 
-@keyframes square-ception-b-p3d2y3bv42 {
+@keyframes square-ception-b-bz1cz4xzky {
 	0% {
 		transform: rotate(0deg);
 		background-color: cyan;
