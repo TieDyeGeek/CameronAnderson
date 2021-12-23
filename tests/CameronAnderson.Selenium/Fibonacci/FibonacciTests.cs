@@ -24,7 +24,7 @@ namespace CameronAnderson.Selenium.Fibonacci
 			driver.Quit();
 		}
 
-		private IWebDriver GetDriver()
+		private static IWebDriver GetDriver()
 		{
 			var options = new EdgeOptions();
 
