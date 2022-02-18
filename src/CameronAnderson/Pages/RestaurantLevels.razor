@@ -17,20 +17,22 @@ else
 	<br />
 	<br />
 
-	@foreach (var level in restaurants
-							.Select(x => x.Level)
-							.Distinct()
-							.OrderBy(x => x))
-	{
-		<h3>Level @level:</h3>
-		@foreach (var restaurant in restaurants
-							.Where(x => x.Level.Equals(level))
-							.OrderBy(x => x.Name))
+	<table>
+		<tr>
+			<th>Restaurant</th>
+			<th>Level</th>
+		</tr>
+
+		@foreach (var restaurant in restaurants)
 		{
-			<ul>@restaurant.Name</ul>
+			<tr>
+				<td>@restaurant.Name</td>
+				<td>@restaurant.Level</td>
+			</tr>
 		}
-		<br />
-	}
+
+	</table>
+
 }
 
 @code
