@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using Xunit;
 
 namespace CameronAnderson.Selenium.BasePages;
 
@@ -21,6 +22,11 @@ public class BasePage<T> where T : BasePage<T>
 	public static T Load(IWebDriver driver)
 	{
 		return (T)Activator.CreateInstance(typeof(T), driver);
+	}
+
+	protected void VerifyUrl(string url)
+	{
+		Assert.Equal($"{BaseTesting.Environment.Current()}{url}", WebDriver.Url, ignoreCase: true);
 	}
 
 	protected void WaitForElement(By by, double seconds = 10)

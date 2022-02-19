@@ -1,5 +1,8 @@
 ﻿using CameronAnderson.Selenium.Fibonacci;
 using CameronAnderson.Selenium.Home;
+using CameronAnderson.Selenium.LoadingIcons;
+using CameronAnderson.Selenium.RestaurantLevels;
+using CameronAnderson.Selenium.Resume;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -36,8 +39,22 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	public HomePage GoToHomePage()
 	{
 		OpenHamburgerMenu();
-		FibonacciCounterLink.Click();
+		HomeLink.Click();
 		return HomePage.Load(WebDriver);
+	}
+
+	public ResumePage GoToResumePage()
+	{
+		OpenHamburgerMenu();
+		ResumeLink.Click();
+		return ResumePage.Load(WebDriver);
+	}
+
+	public LoadingIconsPage GoToLoadingIconsPage()
+	{
+		OpenHamburgerMenu();
+		LoadingIconsLink.Click();
+		return LoadingIconsPage.Load(WebDriver);
 	}
 
 	public FibonacciCounterPage GoToFibonacciPage()
@@ -45,6 +62,13 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 		OpenHamburgerMenu();
 		FibonacciCounterLink.Click();
 		return FibonacciCounterPage.Load(WebDriver);
+	}
+
+	public RestaurantLevelsPage GoToRestaurantLevelsPage()
+	{
+		OpenHamburgerMenu();
+		RestaurantLevelsLink.Click();
+		return RestaurantLevelsPage.Load(WebDriver);
 	}
 
 	protected void OpenHamburgerMenu()
