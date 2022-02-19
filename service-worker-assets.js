@@ -33,15 +33,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-oYosPfNEnWArj0Kk4ljUO6EioNBieddMqo2TMicijfo=",
+      "hash": "sha256-fulGW6mTy7HQVv1FrFuvSJMvP9pr9pvmNgGaSpop\/og=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-zisbAvBBDLwr4iciBAMUWS9AsSSmQFOUZcNm8qg9kiQ=",
+      "hash": "sha256-xHg5XIEuYU7wP5C\/hjXbh5Klb2VjR+3nNM0AuvaGpes=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
-      "hash": "sha256-TwXy0JDj+HYtKDo7k37m+c3YJnJAaEBM8KiVmqNhxhc=",
+      "hash": "sha256-xYaFW8dsUB5vDGCLjt8dKWavjasZnnKPdGjBIhzi27Y=",
       "url": "_framework\/CameronAnderson.Restaurants.dll"
     },
     {
@@ -117,7 +117,7 @@
       "url": "_framework\/System.ComponentModel.dll"
     },
     {
-      "hash": "sha256-rpSx9347aVfU5xs4SqHViIhicvIA2y6F9Yaf\/hu7R5E=",
+      "hash": "sha256-IbZYiU9fEq2bsbp5HjZXmFKSvqUp7BgYUv\/59p8WbNI=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -133,7 +133,7 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-\/TrxIqewAgRPl5Uk+iQ601\/6fNg6WflBk4EtNHs8tsg=",
+      "hash": "sha256-uI5O0okSLplOwLqrEg7dhtta0NtVey4r0rq0NCFvCBg=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -229,5 +229,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "cerWtiv7"
+  "version": "oQ\/IDYkb"
 };
