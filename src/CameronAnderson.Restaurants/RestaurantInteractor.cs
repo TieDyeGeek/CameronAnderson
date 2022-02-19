@@ -14,11 +14,15 @@
 				new Restaurant("Portillos", 1.5),
 				new Restaurant("Chipotle", 1.5),
 				new Restaurant("Dominos", 1.5),
+				new Restaurant("Culvers", 1.5),
 				new Restaurant("Chinese Buffets", 2),
 				new Restaurant("Buffalo Wild Wings", 2),
 				new Restaurant("Kenny's Westside Pub", 2),
+				new Restaurant("Noodles & Company", 2),
 				new Restaurant("Olive Garden", 3),
+				new Restaurant("Applebees", 3),
 				new Restaurant("Blue Duck", 3),
+				new Restaurant("Texas Road House", 3),
 				new Restaurant("Alexander's Steakhouse", 4)
 			};
 		}
