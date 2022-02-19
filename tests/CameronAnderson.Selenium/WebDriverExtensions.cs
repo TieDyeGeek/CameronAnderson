@@ -1,21 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿using CameronAnderson.Selenium.BaseTesting;
+using OpenQA.Selenium;
 
-namespace CameronAnderson.Selenium
+namespace CameronAnderson.Selenium;
+
+public static class WebDriverExtensions
 {
-	public static class WebDriverExtensions
+	public static void GoToPage(this IWebDriver driver, string page)
 	{
-		private const string Local = "https://localhost:5001/";
-		private const string Prod = "https://cameronanderson.co/";
-
-		public static void GoToPage(this IWebDriver driver, string page)
-		{
-			var baseUrl = Local;
-
-#if BUILDSERVER
-			baseUrl = Prod;
-#endif
-
-			driver.Navigate().GoToUrl(baseUrl + page);
-		}
+		driver.Navigate().GoToUrl(Environment.Current() + page);
 	}
 }
