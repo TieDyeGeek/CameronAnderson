@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-msHFUFpz8CyNFDQey64Zi9NIFJb0YPjzlyT7apuwSV8=",
+      "hash": "sha256-tQTirYlgCTlo2bX6u4jHzLjQnS41ANlPUHknmFaZoM0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-RUzY6eEU\/JWPn+xlehfXNLQ4QFm5us7VDN0GbGQFg4Q=",
+      "hash": "sha256-XO4b1HbWwhqMU7iJ6OjVlbiNitFc4dGcvZLeosaVubU=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-3Xh9cv8kFquciYX4Bg0k5LTUYKUi027D7D63QOchzB0=",
+      "hash": "sha256-3cVUo8i5rFkJfNQfj\/f9WR1utuVYDY2K4kpw3yWYKx8=",
       "url": "CameronAnderson.styles.css"
     },
     {
@@ -229,5 +229,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "trg0YRRI"
+  "version": "GYjYDUgJ"
 };

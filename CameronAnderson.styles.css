@@ -683,24 +683,46 @@
 	overflow: scroll;
 }
 /* /Pages/RestaurantLevels.razor.rz.scp.css */
+.level-selector[b-nzhoiubz5w] {
+	font-size: 1.2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
 .level-descriptions[b-nzhoiubz5w] {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
-.restaurant[b-nzhoiubz5w] {
+.restaurant-group[b-nzhoiubz5w] {
+}
+
+.restaurant-level-group[b-nzhoiubz5w] {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	border: solid;
-	border-color: grey;
-	padding: 10px;
-	border-radius: 10px;
+	border-radius: 1rem;
+	width: 100%;
+	max-width: 35rem;
 }
 
-.restaurant-header[b-nzhoiubz5w] {
-	font-size: 1.2em;
+.restaurant-level[b-nzhoiubz5w] {
+	display: inline-block;
+	font-size: 3rem;
+	vertical-align: top;
+	padding: 0.5rem;
+	width: 6rem;
 }
 
-.restaurant-data[b-nzhoiubz5w] {
-	font-size: 1.1em;
+.restaurant-name-group[b-nzhoiubz5w] {
+	display: inline-block;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.restaurant-name[b-nzhoiubz5w] {
+	font-size: 1.2rem;
+	padding: 0.2rem;
 }
 /* /Pages/Resume.razor.rz.scp.css */
 .body[b-qhtqbni4jp] {
