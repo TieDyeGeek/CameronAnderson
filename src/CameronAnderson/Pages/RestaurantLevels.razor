@@ -40,25 +40,34 @@ else
 
 
 	<div class="restaurant-group">
-			@foreach(var level in restaurants.Select(x => x.Level)
-				.Where(x=> x >= minimumLevel && x <= maximumLevel)
-				.Distinct())
-			{
-				<div class="restaurant-level-group">
-					<div class="restaurant-level">
-						@level
-					</div>
+		@foreach(var level in restaurants.Select(x => x.Level)
+			.Where(x=> x >= minimumLevel && x <= maximumLevel)
+			.Distinct())
+		{
+			<div class="restaurant-level-group">
+				<div class="restaurant-level">
+					@level
+				</div>
 
-					<div class="restaurant-name-group">
-						@foreach(var restaurant in restaurants.Where(x => x.Level.Equals(level)))
+				<div class="restaurant-name-group">
+					@foreach(var restaurant in restaurants.Where(x => x.Level.Equals(level)))
+					{
+						if (restaurant.MenuLink != null)
+						{
+							<a class="restaurant-name" href="@restaurant.MenuLink" target="_blank">
+								@restaurant.Name
+							</a>
+						}
+						else
 						{
 							<div class="restaurant-name">
 								@restaurant.Name
 							</div>
 						}
-					</div>
+					}
 				</div>
-			}
+			</div>
+		}
 	</div>
 }
 

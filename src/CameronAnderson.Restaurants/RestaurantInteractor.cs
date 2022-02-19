@@ -16,7 +16,7 @@ public static class RestaurantInteractor
 			new Restaurant("Domino's", 1.5),
 			new Restaurant("Culver's", 1.5),
 			new Restaurant("Chinese Buffets", 2),
-			new Restaurant("Buffalo Wild Wings", 2),
+			new Restaurant("Buffalo Wild Wings", 2, "https://www.buffalowildwings.com/en/food/"),
 			new Restaurant("Kenny's Westside Pub", 2),
 			new Restaurant("Noodles and Company", 2),
 			new Restaurant("Olive Garden", 3),
