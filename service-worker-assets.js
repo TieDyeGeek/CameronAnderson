@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-fulGW6mTy7HQVv1FrFuvSJMvP9pr9pvmNgGaSpop\/og=",
+      "hash": "sha256-msHFUFpz8CyNFDQey64Zi9NIFJb0YPjzlyT7apuwSV8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-xHg5XIEuYU7wP5C\/hjXbh5Klb2VjR+3nNM0AuvaGpes=",
+      "hash": "sha256-RUzY6eEU\/JWPn+xlehfXNLQ4QFm5us7VDN0GbGQFg4Q=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
@@ -229,5 +229,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "oQ\/IDYkb"
+  "version": "trg0YRRI"
 };
