@@ -65,7 +65,8 @@ else
 
 	protected override async Task OnInitializedAsync()
 	{
-		restaurants = RestaurantInteractor.GetRestaurants();
+		restaurants = RestaurantInteractor.GetRestaurants()
+			.OrderBy(x => x.Level).ThenBy(x => x.Name).ToList();
 		minimumLevel = restaurants.Select(x => x.Level).Min();
 		maximumLevel = restaurants.Select(x => x.Level).Max();
 	}
