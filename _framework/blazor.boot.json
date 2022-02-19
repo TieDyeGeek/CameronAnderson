@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "CameronAnderson.dll": "sha256-fQ+InykjGJbAxgADUhjYr+phjVjaYK\/3gIV8pfUe5ts=",
+      "CameronAnderson.dll": "sha256-3vFAaxyFM7oSEX6OP2M49tN9s2iMFi4V4JBgBjdNb48=",
       "CameronAnderson.Restaurants.dll": "sha256-TbAJqxWlzR5+8nN4lKuDlZbf9TE9bAFCGbWMvZBMjGU=",
       "CameronAnderson.Resume.dll": "sha256-cX1Eka+\/r7feH3fJ9YuNi\/77coyz\/tgru2f4UUwP4xM=",
       "Microsoft.AspNetCore.Components.dll": "sha256-Hm3JaUxjVzjqQTkubmM272\/lnb99t1AbNAb8BbdOiwk=",

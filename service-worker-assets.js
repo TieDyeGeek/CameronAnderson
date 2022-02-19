@@ -33,11 +33,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-A\/D\/03pND7KV\/AP4iTO1Acgu0wP20dZd3f0+Zo1pJmk=",
+      "hash": "sha256-O\/nJsO559pgG61SzDDjK079On9aG9+4nx\/yU+5nYi+k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-fQ+InykjGJbAxgADUhjYr+phjVjaYK\/3gIV8pfUe5ts=",
+      "hash": "sha256-3vFAaxyFM7oSEX6OP2M49tN9s2iMFi4V4JBgBjdNb48=",
       "url": "_framework\/CameronAnderson.dll"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-yTQGtERTyDZU2mtLKEmcWO93dhDI7g4JD5e+lsjAduI=",
+      "hash": "sha256-bbLmL7YAWIKZn6\/UnvTS7bcsjAanJgpMAvrzqgIiiQA=",
       "url": "CameronAnderson.styles.css"
     },
     {
@@ -229,5 +229,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "TZOlTFHA"
+  "version": "k4NRjVk0"
 };
