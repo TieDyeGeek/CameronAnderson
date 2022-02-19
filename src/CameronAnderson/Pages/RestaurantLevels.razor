@@ -9,25 +9,46 @@
 }
 else
 {
-	<p>Level 1:  Fast Food (order at front)</p>
-	<p>Level 1.5:  Semi-Fast Food</p>
-	<p>Level 2:  Mom & Pops / Sports Bars ("sit downs")</p>
-	<p>Level 3:  Full Sit Downs (no TVs)</p>
-	<p>Level 4:  Fancy (specialty items; focus)</p>
-	<br />
-	<br />
+	<div>
+		Minimum Level: 
+		<select @bind="minimumLevel">
+			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
+			{
+				<option value="@level" disabled="@(level > maximumLevel)" >@level</option>
+			}
+		</select> 
+	</div>
+
+	<div>
+		Maximum Level:
+		<select @bind="maximumLevel">
+			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
+			{
+				<option value="@level" disabled="@(level < minimumLevel)">@level</option>
+			}
+		</select>
+	</div>
+
+
+	<div class="level-descriptions">
+		<div>Level 1:  Fast Food (order at front)</div>
+		<div>Level 1.5:  Semi-Fast Food</div>
+		<div>Level 2:  Mom & Pops / Sports Bars ("sit downs")</div>
+		<div>Level 3:  Full Sit Downs (no TVs)</div>
+		<div>Level 4:  Fancy (specialty items; focus)</div>	
+	</div>
 
 	<table>
 		<tr>
-			<th>Restaurant</th>
-			<th>Level</th>
+			<th><div class="restaurant restaurant-header">Restaurant</div></th>
+			<th><div class="restaurant restaurant-header">Level</div></th>
 		</tr>
 
-		@foreach (var restaurant in restaurants)
+		@foreach (var restaurant in restaurants.Where(x => x.Level >= minimumLevel && x.Level <= maximumLevel))
 		{
 			<tr>
-				<td>@restaurant.Name</td>
-				<td>@restaurant.Level</td>
+				<td><div class="restaurant restaurant-data">@restaurant.Name</div></td>
+				<td><div class="restaurant restaurant-data">@restaurant.Level</div></td>
 			</tr>
 		}
 
@@ -37,10 +58,15 @@ else
 
 @code
 {
-	private List<CameronAnderson.Restaurants.Restaurant> restaurants { get; set; }
+	private double minimumLevel { get; set; }
+	private double maximumLevel { get; set; }
+
+	private List<Restaurant> restaurants { get; set; }
 
 	protected override async Task OnInitializedAsync()
 	{
 		restaurants = RestaurantInteractor.GetRestaurants();
+		minimumLevel = restaurants.Select(x => x.Level).Min();
+		maximumLevel = restaurants.Select(x => x.Level).Max();
 	}
 }

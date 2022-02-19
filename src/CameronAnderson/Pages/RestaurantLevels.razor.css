@@ -1,0 +1,19 @@
+﻿.level-descriptions {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.restaurant {
+	border: solid;
+	border-color: grey;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.restaurant-header {
+	font-size: 1.2em;
+}
+
+.restaurant-data {
+	font-size: 1.1em;
+}
