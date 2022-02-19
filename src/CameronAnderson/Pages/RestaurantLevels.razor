@@ -9,7 +9,7 @@
 }
 else
 {
-	<div>
+	<div class="level-selector">
 		Minimum Level: 
 		<select @bind="minimumLevel">
 			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
@@ -19,7 +19,7 @@ else
 		</select> 
 	</div>
 
-	<div>
+	<div class="level-selector">
 		Maximum Level:
 		<select @bind="maximumLevel">
 			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
@@ -38,22 +38,28 @@ else
 		<div>Level 4:  Fancy (specialty items; focus)</div>	
 	</div>
 
-	<table>
-		<tr>
-			<th><div class="restaurant restaurant-header">Restaurant</div></th>
-			<th><div class="restaurant restaurant-header">Level</div></th>
-		</tr>
 
-		@foreach (var restaurant in restaurants.Where(x => x.Level >= minimumLevel && x.Level <= maximumLevel))
-		{
-			<tr>
-				<td><div class="restaurant restaurant-data">@restaurant.Name</div></td>
-				<td><div class="restaurant restaurant-data">@restaurant.Level</div></td>
-			</tr>
-		}
+	<div class="restaurant-group">
+			@foreach(var level in restaurants.Select(x => x.Level)
+				.Where(x=> x >= minimumLevel && x <= maximumLevel)
+				.Distinct())
+			{
+				<div class="restaurant-level-group">
+					<div class="restaurant-level">
+						@level
+					</div>
 
-	</table>
-
+					<div class="restaurant-name-group">
+						@foreach(var restaurant in restaurants.Where(x => x.Level.Equals(level)))
+						{
+							<div class="restaurant-name">
+								@restaurant.Name
+							</div>
+						}
+					</div>
+				</div>
+			}
+	</div>
 }
 
 @code
