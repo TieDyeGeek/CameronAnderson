@@ -1,0 +1,21 @@
+﻿@if (MenuLink != null)
+{
+	<a class="restaurant-name" href="@MenuLink" target="_blank">
+		@Name
+	</a>
+}
+else
+{
+	<div class="restaurant-name">
+		@Name
+	</div>
+}
+
+@code 
+{
+	[Parameter]
+	public string Name { get; set; }
+
+	[Parameter]
+	public string MenuLink { get; set; }
+}

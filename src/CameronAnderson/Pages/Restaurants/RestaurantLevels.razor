@@ -28,7 +28,16 @@ else
 			}
 		</select>
 	</div>
-
+	<div>
+		@if (pickRandom)
+		{
+			<button @onclick=@SwitchToListView>Reset</button>	
+		}
+		else
+		{
+			<button @onclick=@SwitchToRandomView>Pick Random 3</button>
+		}
+	</div>
 
 	<div class="level-descriptions">
 		<div>Level 1:  Fast Food (order at front)</div>
@@ -38,45 +47,47 @@ else
 		<div>Level 4:  Fancy (specialty items; focus)</div>	
 	</div>
 
+	if (pickRandom)
+	{
+		<div class="restaurant-random-group">
+			@foreach (var restaurant in GetRandomRestaurants(3))
+			{
+				<RestaurantComponent Name=@restaurant.Name MenuLink=@restaurant.MenuLink />
+			}
+		</div>
+	}
+	else
+	{
+		<div class="restaurant-group">
+			@foreach (var level in restaurantsInRange.Select(x => x.Level).Distinct())
+			{
+				<div class="restaurant-level-group">
+					<div class="restaurant-level">
+						@level
+					</div>
 
-	<div class="restaurant-group">
-		@foreach(var level in restaurants.Select(x => x.Level)
-			.Where(x=> x >= minimumLevel && x <= maximumLevel)
-			.Distinct())
-		{
-			<div class="restaurant-level-group">
-				<div class="restaurant-level">
-					@level
-				</div>
-
-				<div class="restaurant-name-group">
-					@foreach(var restaurant in restaurants.Where(x => x.Level.Equals(level)))
-					{
-						if (restaurant.MenuLink != null)
+					<div class="restaurant-name-group">
+						@foreach (var restaurant in restaurants.Where(x => x.Level.Equals(level)))
 						{
-							<a class="restaurant-name" href="@restaurant.MenuLink" target="_blank">
-								@restaurant.Name
-							</a>
+							<RestaurantComponent Name=@restaurant.Name MenuLink=@restaurant.MenuLink />
 						}
-						else
-						{
-							<div class="restaurant-name">
-								@restaurant.Name
-							</div>
-						}
-					}
+					</div>
 				</div>
-			</div>
-		}
-	</div>
+			}
+		</div>
+	}
 }
 
 @code
 {
+	private bool pickRandom { get; set; }
 	private double minimumLevel { get; set; }
 	private double maximumLevel { get; set; }
 
 	private List<Restaurant> restaurants { get; set; }
+	private List<Restaurant> restaurantsInRange => restaurants
+		.Where(x => x.Level >= minimumLevel && x.Level <= maximumLevel).ToList();
+
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -84,5 +95,22 @@ else
 			.OrderBy(x => x.Level).ThenBy(x => x.Name).ToList();
 		minimumLevel = restaurants.Select(x => x.Level).Min();
 		maximumLevel = restaurants.Select(x => x.Level).Max();
+	}
+
+	private IEnumerable<Restaurant> GetRandomRestaurants(int amount)
+	{
+		return restaurantsInRange
+			.OrderBy(x => Guid.NewGuid())
+			.Take(amount);
+	}
+
+	private void SwitchToRandomView()
+	{
+		pickRandom = true;
+	}
+
+	private void SwitchToListView()
+	{
+		pickRandom = false;
 	}
 }

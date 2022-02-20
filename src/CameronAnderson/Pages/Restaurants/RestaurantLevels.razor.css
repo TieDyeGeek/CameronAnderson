@@ -35,25 +35,7 @@
 	padding-bottom: 0.5rem;
 }
 
-.restaurant-name {
-	font-size: 1.2rem;
-	color: black;
-
-	padding: 0.2rem;
-}
-
-.restaurant-name a:link {
-	text-decoration: none;
-}
-
-.restaurant-name a:visited {
-	text-decoration: none;
-}
-
-.restaurant-name a:hover {
-	text-decoration: underline;
-}
-
-.restaurant-name a:active {
-	text-decoration: underline;
+.restaurant-random-group {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
