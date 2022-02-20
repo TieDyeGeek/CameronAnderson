@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "CameronAnderson.dll": "sha256-hYVOf4nGylulONnGQLz\/ggApqUR9oOlkdqo6OQThAxI=",
+      "CameronAnderson.dll": "sha256-0WlvloaqAJm8lr38KfD9BksS5awkgNUvDx6xsrSLV\/A=",
       "CameronAnderson.Restaurants.dll": "sha256-J5KepiKELe4tXfkWOyvkyBuuQSTKV+aiNh33VsA17BY=",
       "CameronAnderson.Resume.dll": "sha256-eM3wFtTGOxBYW6G9xTwVq\/Pvnfqa7iogepZHWKZ817g=",
       "Microsoft.AspNetCore.Components.dll": "sha256-HxVClsFc9YH\/8h2scBKVdgNXH5bxTOMwkfFVHIJEnkw=",
@@ -35,7 +35,7 @@
       "System.Private.Runtime.InteropServices.JavaScript.dll": "sha256-6D2SpjKHoAsR\/ZU7dr9FwnRA5XBa\/kM18i01K+WsJMg=",
       "System.Private.Uri.dll": "sha256-2qhFLOnD5egyfXbLfAQuMgBKHCW8KFysZylv9gbQlms=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-KwdHFKy9LFj6xfXZg8Wyi8jq3DQFNrVYYQW2\/YnUW8E=",
-      "System.Runtime.dll": "sha256-olmZqT0weDFyKHrzTrLhsJNTFuYBz5JfFVxOQ+Zbj7c=",
+      "System.Runtime.dll": "sha256-OGenB6rnqagIl4AJGf5NboldRaWSAHZXJyHuaN1qMy4=",
       "System.Runtime.Numerics.dll": "sha256-RcFTVDBeQKZDrXKv3yHZWVxJyQyUDtdCgzOBDNQPUfw=",
       "System.Text.Encodings.Web.dll": "sha256-lbz4zwrlkLNTB+aU7UyZ+GL9noXaZs9wez0jDK2yEN4=",
       "System.Text.Json.dll": "sha256-KRnOQGf8uCXmmBZrwQqVyALxG\/sSsn9Q04lg+uGzLpE="
