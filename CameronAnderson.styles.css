@@ -722,7 +722,25 @@
 
 .restaurant-name[b-nzhoiubz5w] {
 	font-size: 1.2rem;
+	color: black;
+
 	padding: 0.2rem;
+}
+
+.restaurant-name a:link[b-nzhoiubz5w] {
+	text-decoration: none;
+}
+
+.restaurant-name a:visited[b-nzhoiubz5w] {
+	text-decoration: none;
+}
+
+.restaurant-name a:hover[b-nzhoiubz5w] {
+	text-decoration: underline;
+}
+
+.restaurant-name a:active[b-nzhoiubz5w] {
+	text-decoration: underline;
 }
 /* /Pages/Resume.razor.rz.scp.css */
 .body[b-qhtqbni4jp] {
