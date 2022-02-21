@@ -805,7 +805,6 @@
 	font-size: 1.5em;
 	display: block;
 	padding-left: 0.75em;
-	color: black;
 }
 
 .experience-note[b-qhtqbni4jp] {
@@ -814,6 +813,26 @@
 
 .notes[b-qhtqbni4jp] {
 	padding-left: 1.5em;
+}
+
+a[b-qhtqbni4jp] {
+	color: black;
+}
+
+a:link[b-qhtqbni4jp] {
+	text-decoration: none;
+}
+
+a:visited[b-qhtqbni4jp] {
+	text-decoration: none;
+}
+
+a:hover[b-qhtqbni4jp] {
+	text-decoration: underline;
+}
+
+a:active[b-qhtqbni4jp] {
+	text-decoration: underline;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-asng8nkymd] {
