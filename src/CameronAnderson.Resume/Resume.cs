@@ -16,7 +16,7 @@ public class Resume
 public class Link
 {
 	public string Text { get; internal set; }
-	public string Uri { get; internal set; }
+	public string Url { get; internal set; }
 }
 
 public class Education
@@ -24,10 +24,8 @@ public class Education
 	public string Degree { get; internal set; }
 	public DateTime Date { get; internal set; }
 	public string Major { get; internal set; }
-	public string Minor { get; internal set; }
-	public string Project { get; internal set; }
-	public string Institution { get; internal set; }
-	public string InstitutionLocation { get; internal set; }
+	public string Note { get; internal set; }
+	public Company Institution { get; internal set; }
 	public double Gpa { get; internal set; }
 }
 
@@ -44,5 +42,5 @@ public class Company
 {
 	public string Name { get; internal set; }
 	public string Location { get; internal set; }
-	public string Link { get; internal set; }
+	public string Url { get; internal set; }
 }

@@ -47,20 +47,20 @@ public static class ResumeInteractor
 		new Link
 		{
 			Text = "email",
-			Uri = @"mailto:canderson3.14@me.com"
+			Url = @"mailto:canderson3.14@me.com"
 		},
 		new Link
 		{
 			Text = "linkedin",
-			Uri = @"https://www.linkedin.com/in/cameron-anderson/"
+			Url = @"https://www.linkedin.com/in/cameron-anderson/"
 		},
 		new Link
 		{
 			Text = "github",
-			Uri = @"https://github.com/TieDyeGeek/"
+			Url = @"https://github.com/TieDyeGeek/"
 		}
 	};
-	
+
 	private static List<Education> Education => new()
 	{
 		new Education
@@ -68,9 +68,8 @@ public static class ResumeInteractor
 			Degree = "Master of Science",
 			Date = new DateTime(2018, 5, 1),
 			Major = "Computer Science",
-			Project = "Two-Player Asymmetrical Virtual Reality Maze Game",
-			Institution = "Western Illinois University",
-			InstitutionLocation = "Macomb, IL",
+			Note = "Project:  Two-Player Asymmetrical Virtual Reality Maze Game",
+			Institution = WIU,
 			Gpa = 4
 		},
 		new Education
@@ -78,9 +77,8 @@ public static class ResumeInteractor
 			Degree = "Bachelor of Science",
 			Date = new DateTime(2017, 5, 1),
 			Major = "Computer Science",
-			Minor = "Information Systems, Mathematics",
-			Institution = "Western Illinois University",
-			InstitutionLocation = "Macomb, IL",
+			Note = "Minors:  Information Systems, Mathematics",
+			Institution = WIU,
 			Gpa = 3.4
 		}
 	};
@@ -104,7 +102,7 @@ public static class ResumeInteractor
 
 	private static Experience Developer => new()
 	{
-		Company = CSE, 
+		Company = CSE,
 		Position = "Enterprise Software Developer",
 		EmploymentStart = new DateTime(2018, 11, 27),
 		EmploymentEnd = new DateTime(2020, 12, 24),
@@ -159,13 +157,20 @@ public static class ResumeInteractor
 	{
 		Name = "CSE Software, Inc.",
 		Location = "Peoria, IL",
-		Link = "https://www.csesoftware.com/"
+		Url = "https://www.csesoftware.com/"
 	};
 
 	private static Company UHDS => new()
 	{
 		Name = "Western Illinois University Housing & Dining Services",
 		Location = "Macomb, IL",
-		Link = "https://www.wiu.edu/student_services/uhds/index.php"
+		Url = "https://www.wiu.edu/student_services/uhds/index.php"
+	};
+
+	private static Company WIU => new()
+	{
+		Name = "Western Illinois University Housing",
+		Location = "Macomb, IL",
+		Url = "https://www.wiu.edu/"
 	};
 }
