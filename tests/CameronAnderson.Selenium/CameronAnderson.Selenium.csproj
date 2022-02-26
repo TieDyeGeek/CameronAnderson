@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0-preview-20220131-20" />
     <PackageReference Include="Selenium.Support" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="98.0.1108.56" />
