@@ -1,7 +1,6 @@
-﻿namespace CameronAnderson.Secure
+﻿namespace CameronAnderson.Secure;
+
+public interface IAuthorize
 {
-	public interface IAuthorize
-	{
-		bool CanAccess(string password);
-	}
+	bool CanAccess(string password);
 }

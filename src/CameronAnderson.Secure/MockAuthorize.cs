@@ -1,10 +1,9 @@
-﻿namespace CameronAnderson.Secure
+﻿namespace CameronAnderson.Secure;
+
+public class MockAuthorize : IAuthorize
 {
-	public class MockAuthorize : IAuthorize
+	public bool CanAccess(string password)
 	{
-		public bool CanAccess(string password)
-		{
-			return "TieDyeGeek".Equals(password);
-		}
+		return "TieDyeGeek".Equals(password);
 	}
 }
