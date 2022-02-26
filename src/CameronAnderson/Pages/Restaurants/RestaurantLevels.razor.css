@@ -1,0 +1,41 @@
+﻿.level-selector {
+	font-size: 1.2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.level-descriptions {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.restaurant-group {
+}
+
+.restaurant-level-group {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: solid;
+	border-radius: 1rem;
+	width: 100%;
+	max-width: 35rem;
+}
+
+.restaurant-level {
+	display: inline-block;
+	font-size: 3rem;
+	vertical-align: top;
+	padding: 0.5rem;
+	width: 6rem;
+}
+
+.restaurant-name-group {
+	display: inline-block;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.restaurant-random-group {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}

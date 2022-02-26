@@ -12,9 +12,9 @@ else
 		<div class="location">@resume.Location</div>
 		@foreach (var link in resume.Links)
 		{
-			<NavLink class="link" href="@link.Uri" target="_blank">
+			<a class="link" href="@link.Url" target="_blank">
 				@link.Text
-			</NavLink>
+			</a>
 
 			@if (!link.Equals(resume.Links.Last()))
 			{
@@ -32,9 +32,9 @@ else
 			<div class="experience">
 				<div class="experience-heading">@experience.Position</div>
 				<div class="experience-date">@experience.EmploymentStart.ToString("Y") &mdash; @(experience.EmploymentEnd == null ? "Present" : experience.EmploymentEnd.Value.ToString("Y"))</div>
-				<NavLink class="experience-subheading" href="@experience.Company.Link" target="_blank">
+				<a class="experience-subheading" href="@experience.Company.Url" target="_blank">
 					@experience.Company.Name &mdash; @experience.Company.Location
-				</NavLink>
+				</a>
 
 				<div class="notes">
 					@foreach (var note in experience.Notes)
@@ -54,11 +54,13 @@ else
 				<div class="experience-heading">@education.Degree</div>
 				<div class="experience-date">@education.Date.ToString("Y")</div>
 				<div class="experience-subheading">@education.Major</div>
-				<div class="experience-note">@education.Institution, @education.InstitutionLocation</div>
+				<a class="experience-note" href=@education.Institution.Url target="_blank">
+					@education.Institution.Name, @education.Institution.Location
+				</a>
 				<div class="experience-note">GPA:  @education.Gpa.ToString("0.0")</div>
-				@if (!string.IsNullOrWhiteSpace(education.Minor))
+				@if (!string.IsNullOrWhiteSpace(education.Note))
 				{
-					<div class="experience-note">Minors:  @education.Minor</div>
+					<div class="experience-note">@education.Note</div>
 				}
 			</div>
 		}

@@ -1,49 +1,44 @@
-﻿using OpenQA.Selenium;
+﻿using CameronAnderson.Selenium.BasePages;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System.Numerics;
 using Xunit;
 
-namespace CameronAnderson.Selenium.Fibonacci
+namespace CameronAnderson.Selenium.Fibonacci;
+
+public class FibonacciCounterPage : PageWithNavigationLinks<FibonacciCounterPage>
 {
-	public class FibonacciCounterPage : BasePage
+	[FindsBy(How.ClassName, "btn-primary")]
+	private IWebElement IncrementButton { get; set; }
+
+	[FindsBy(How.TagName, "p")]
+	private IWebElement CurrentNumberLabel { get; set; }
+
+	public FibonacciCounterPage(IWebDriver driver) : base(driver)
 	{
-		[FindsBy(How.ClassName, "btn-primary")]
-		private IWebElement IncrementButton { get; set; }
+		WaitForElement(x => x.IncrementButton);
+		VerifyUrl("fibonacci");
+	}
 
-		[FindsBy(How.TagName, "p")]
-		private IWebElement CurrentNumberLabel { get; set; }
+	public FibonacciCounterPage ClickButton()
+	{
+		IncrementButton.Click();
+		return this;
+	}
 
-		public FibonacciCounterPage(IWebDriver driver) : base(driver)
-		{
-			WaitForElement(By.TagName("h1"));
-		}
+	public FibonacciCounterPage VerifyNumberIs(BigInteger expectedValue)
+	{
+		Assert.Equal(expectedValue, GetCurrentNumber());
+		return this;
+	}
 
-		public static FibonacciCounterPage Load(IWebDriver driver)
-		{
-			driver.GoToPage("Fibonacci");
-			return new(driver);
-		}
+	private BigInteger? GetCurrentNumber()
+	{
+		var isNumber = BigInteger.TryParse(CurrentNumberLabel.Text
+			.Replace("Current number: ", "")
+			.Replace(",", "")
+			, out var number);
 
-		public FibonacciCounterPage ClickButton()
-		{
-			IncrementButton.Click();
-			return this;
-		}
-
-		public FibonacciCounterPage VerifyNumberIs(BigInteger expectedValue)
-		{
-			Assert.Equal(expectedValue, GetCurrentNumber());
-			return this;
-		}
-
-		private BigInteger? GetCurrentNumber()
-		{
-			var isNumber = BigInteger.TryParse(CurrentNumberLabel.Text
-				.Replace("Current number: ", "")
-				.Replace(",", "")
-				, out var number);
-
-			return isNumber ? number : null;
-		}
+		return isNumber ? number : null;
 	}
 }

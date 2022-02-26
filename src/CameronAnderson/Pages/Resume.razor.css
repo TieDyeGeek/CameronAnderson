@@ -56,7 +56,6 @@
 	font-size: 1.5em;
 	display: block;
 	padding-left: 0.75em;
-	color: black;
 }
 
 .experience-note {
@@ -65,4 +64,24 @@
 
 .notes {
 	padding-left: 1.5em;
+}
+
+a {
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
 }
