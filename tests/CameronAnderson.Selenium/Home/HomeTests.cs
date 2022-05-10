@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CameronAnderson.Selenium.Home;
 
-public class HomeTests : BaseTesting.BaseTest
+public class HomeTests : BaseTest
 {
 	public HomeTests(DriverWrapper driverWrapper) : base(driverWrapper)
 	{
