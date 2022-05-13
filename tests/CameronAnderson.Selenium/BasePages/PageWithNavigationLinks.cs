@@ -31,6 +31,9 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	[FindsBy(How.Id, "RestaurantLevelsLink")]
 	protected IWebElement RestaurantLevelsLink { get; set; }
 
+	[FindsBy(How.Id, "SourceLink")]
+	protected IWebElement SourceLink { get; set; }
+
 	public PageWithNavigationLinks(IWebDriver driver) : base(driver)
 	{
 		WaitForElement(x => x.Title);
@@ -40,6 +43,13 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	{
 		OpenHamburgerMenu();
 		HomeLink.Click();
+		return HomePage.Load(WebDriver);
+	}
+
+	public HomePage ClickTitle()
+	{
+		OpenHamburgerMenu();
+		Title.Click();
 		return HomePage.Load(WebDriver);
 	}
 
@@ -75,5 +85,10 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	{
 		if (HamburgerMenu.Displayed)
 			HamburgerMenu.Click();
+	}
+
+	public void ClickSourceLink()
+	{
+		SourceLink.Click();
 	}
 }

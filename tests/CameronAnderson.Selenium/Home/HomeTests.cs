@@ -14,8 +14,29 @@ public class HomeTests : BaseTest
 	{
 		Load()
 			.GoToResumePage()
+			.GoToHomePage()
 			.GoToLoadingIconsPage()
 			.GoToFibonacciPage()
-			.GoToRestaurantLevelsPage();
+			.GoToRestaurantLevelsPage()
+			.ClickTitle();
+	}
+
+	[Fact]
+	public void HeadingTest()
+	{
+		var page = Load();
+		Assert.Equal("Hello, world!", page.HeadingText);
+	}
+
+	[Fact]
+	public void SourceButtonTest()
+	{
+		Load().ClickSourceLink();
+		Wait(2);
+
+		VerifyNumberOfTabs(2);
+		SwitchToTab(2);
+
+		Assert.Equal("https://github.com/tiedyegeek/CameronAnderson", WebDriver.Url);
 	}
 }
