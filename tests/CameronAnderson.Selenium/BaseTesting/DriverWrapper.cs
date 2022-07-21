@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Safari;
 using System;
 
 namespace CameronAnderson.Selenium.BaseTesting;
@@ -8,13 +9,13 @@ public class DriverWrapper : IDisposable
 {
     public DriverWrapper()
     {
-        var options = new EdgeOptions();
-
 #if BUILDSERVER
+        var options = new EdgeOptions();
         options.AddArgument("headless");
-#endif
-
         Driver = new EdgeDriver(options);
+#else
+        Driver = new SafariDriver();
+#endif
     }
 
     public IWebDriver Driver { get; set; }
