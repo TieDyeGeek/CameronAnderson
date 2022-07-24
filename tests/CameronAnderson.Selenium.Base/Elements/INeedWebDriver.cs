@@ -4,5 +4,5 @@ namespace CameronAnderson.Selenium.Base.Elements;
 
 public interface INeedWebDriver
 {
-	IWebDriver? WebDriver { get; }
+	IWebDriver? WebDriver { get; set; }
 }
