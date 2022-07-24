@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Reflection;
+using CameronAnderson.Selenium.Base.Elements;
 using CameronAnderson.Selenium.Base.Exceptions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -14,7 +15,8 @@ public class BasePage<T> where T : BasePage<T>
 	public BasePage(IWebDriver driver)
 	{
 		WebDriver = driver;
-		PageFactory.InitElements(WebDriver, this); 
+		PageFactory.InitElements(WebDriver, this);
+		SetWebDriverInChildObjects(WebDriver);
 	}
 
 	public static T Load(IWebDriver driver)
@@ -63,4 +65,20 @@ public class BasePage<T> where T : BasePage<T>
 	}
 
 	private BindingFlags BindingFlags => BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
+
+	private void SetWebDriverInChildObjects(IWebDriver driver)
+	{
+		var properties = typeof(T).GetProperties(BindingFlags);
+
+		foreach (var property in properties)
+		{
+			if (typeof(INeedWebDriver).IsAssignableFrom(property.PropertyType))
+			{
+				var instanceNeedingDriver = property.GetValue(this);
+				var driverProperty = property.PropertyType.GetProperty(nameof(INeedWebDriver.WebDriver));
+
+				driverProperty?.SetValue(instanceNeedingDriver, driver);
+			}
+		}
+	}
 }
