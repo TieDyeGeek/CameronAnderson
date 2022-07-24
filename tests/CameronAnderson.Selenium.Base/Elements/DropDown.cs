@@ -21,7 +21,6 @@ public class DropDown : IWrapsElement
 
 	public DropDownOption SelectedOption => Map(SelectElement.SelectedOption);
 
-
 	public void SelectOption(string text)
 	{
 		SelectElement.SelectByText(text);

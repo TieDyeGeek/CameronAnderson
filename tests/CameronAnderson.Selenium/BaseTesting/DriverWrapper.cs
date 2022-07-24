@@ -1,27 +1,26 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Edge;
+﻿using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Safari;
-using System;
 
 namespace CameronAnderson.Selenium.BaseTesting;
 
 public class DriverWrapper : IDisposable
 {
-    public DriverWrapper()
-    {
+	public DriverWrapper()
+	{
 #if BUILDSERVER
-        var options = new EdgeOptions();
-        options.AddArgument("headless");
-        Driver = new EdgeDriver(options);
+		var options = new EdgeOptions();
+		options.AddArgument("headless");
+		Driver = new EdgeDriver(options);
 #else
-        Driver = new SafariDriver();
+		Driver = new SafariDriver();
 #endif
-    }
+	}
 
-    public IWebDriver Driver { get; set; }
+	public IWebDriver Driver { get; set; }
 
-    public void Dispose()
-    {
-        Driver.Quit();
-    }
+	public void Dispose()
+	{
+		Driver.Quit();
+	}
 }
