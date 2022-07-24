@@ -1,5 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Safari;
 
 namespace CameronAnderson.Selenium.BaseTesting;
