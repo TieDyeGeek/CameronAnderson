@@ -13,6 +13,6 @@ public class ResumePage : PageWithNavigationLinks<ResumePage>
 	public ResumePage(IWebDriver driver) : base(driver)
 	{
 		WaitForElement(x => x.Heading);
-		VerifyUrl("resume");
+		VerifyUrl("/resume");
 	}
 }

@@ -31,4 +31,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CameronAnderson.Selenium.Base\CameronAnderson.Selenium.Base.csproj" />
+  </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31410.414
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CameronAnderson.Selenium", "CameronAnderson.Selenium\CameronAnderson.Selenium.csproj", "{4334ABCE-41FA-44E8-943A-E71951F35E63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Selenium.Base", "CameronAnderson.Selenium.Base\CameronAnderson.Selenium.Base.csproj", "{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BuildServer|Any CPU = BuildServer|Any CPU
@@ -18,6 +20,12 @@ Global
 		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4334ABCE-41FA-44E8-943A-E71951F35E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.BuildServer|Any CPU.ActiveCfg = Release|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.BuildServer|Any CPU.Build.0 = Release|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA59DF31-8BBF-4D30-B8DE-A38446F6AC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

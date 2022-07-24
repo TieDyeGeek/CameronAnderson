@@ -1,4 +1,5 @@
-﻿using CameronAnderson.Selenium.Fibonacci;
+﻿using CameronAnderson.Selenium.Base;
+using CameronAnderson.Selenium.Fibonacci;
 using CameronAnderson.Selenium.Home;
 using CameronAnderson.Selenium.LoadingIcons;
 using CameronAnderson.Selenium.RestaurantLevels;

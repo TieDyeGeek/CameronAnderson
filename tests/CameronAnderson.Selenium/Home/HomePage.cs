@@ -13,5 +13,6 @@ public class HomePage : PageWithNavigationLinks<HomePage>
 	public HomePage(IWebDriver driver) : base(driver)
 	{
 		WaitForElement(x => x.Heading);
+		VerifyUrl("/");
 	}
 }

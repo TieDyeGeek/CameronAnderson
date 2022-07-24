@@ -11,7 +11,7 @@ else
 {
 	<div class="level-selector">
 		Minimum Level: 
-		<select @bind="minimumLevel">
+		<select id="minimumLevel" @bind="minimumLevel">
 			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
 			{
 				<option value="@level" disabled="@(level > maximumLevel)" >@level</option>
@@ -21,7 +21,7 @@ else
 
 	<div class="level-selector">
 		Maximum Level:
-		<select @bind="maximumLevel">
+		<select id="maximumLevel" @bind="maximumLevel">
 			@foreach (var level in restaurants.Select(x => x.Level).Distinct())
 			{
 				<option value="@level" disabled="@(level < minimumLevel)">@level</option>

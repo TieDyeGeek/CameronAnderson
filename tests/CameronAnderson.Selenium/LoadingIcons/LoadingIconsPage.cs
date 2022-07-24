@@ -17,7 +17,7 @@ public class LoadingIconsPage : PageWithNavigationLinks<LoadingIconsPage>
 	public LoadingIconsPage(IWebDriver driver) : base(driver)
 	{
 		WaitForElement(x => x.TitleText);
-		VerifyUrl("loading");
+		VerifyUrl("/loading");
 		LoadCards();
 	}
 
