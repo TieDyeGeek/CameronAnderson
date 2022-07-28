@@ -42,13 +42,13 @@ public class BasePage<T> where T : BasePage<T>
 		if (!equal) throw new PageException($"Path does not match (Expected: {path}, Actual: {currentPath})");
 	}
 
-	protected virtual void WaitForElement(By by, double seconds = 10)
+	protected virtual void WaitForElement(By by, double seconds = 5)
 	{
 		var wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(seconds));
 		wait.Until(e => e.FindElements(by).FirstOrDefault());
 	}
 
-	protected virtual void WaitForElement(Expression<Func<T, object>> property, double seconds = 90)
+	protected virtual void WaitForElement(Expression<Func<T, object>> property, double seconds = 5)
 	{
 		var prop = typeof(T).GetProperty(ParsePropertyName(property), BindingFlags);
 		var attribute = prop?.GetCustomAttribute(typeof(FindsByAttribute), false);

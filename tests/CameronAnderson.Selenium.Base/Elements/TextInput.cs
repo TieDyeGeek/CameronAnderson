@@ -21,14 +21,14 @@ public class TextInput : IWrapsElement
 	}
 
 	public void Clear()
-    {
+	{
 		WrappedElement.Clear();
-    }
+	}
 
 	public void SendKeys(string text)
-    {
+	{
 		if (string.IsNullOrEmpty(text)) return;
 
 		WrappedElement.SendKeys(text);
-    }
+	}
 }

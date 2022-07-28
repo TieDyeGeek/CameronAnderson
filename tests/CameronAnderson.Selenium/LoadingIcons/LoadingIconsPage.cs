@@ -1,8 +1,8 @@
-﻿using CameronAnderson.Selenium.BasePages;
+﻿using System.Collections.Generic;
+using System.Linq;
+using CameronAnderson.Selenium.BasePages;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace CameronAnderson.Selenium.LoadingIcons;
