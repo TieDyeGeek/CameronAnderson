@@ -17,7 +17,7 @@ public class FibonacciCounterPage : PageWithNavigationLinks<FibonacciCounterPage
 	public FibonacciCounterPage(IWebDriver driver) : base(driver)
 	{
 		WaitForElement(x => x.IncrementButton);
-		VerifyUrl("fibonacci");
+		VerifyUrl("/fibonacci");
 	}
 
 	public FibonacciCounterPage ClickButton()

@@ -1,4 +1,6 @@
-﻿using CameronAnderson.Selenium.Fibonacci;
+﻿using CameronAnderson.Selenium.Base;
+using CameronAnderson.Selenium.Base.Elements;
+using CameronAnderson.Selenium.Fibonacci;
 using CameronAnderson.Selenium.Home;
 using CameronAnderson.Selenium.LoadingIcons;
 using CameronAnderson.Selenium.RestaurantLevels;
@@ -11,25 +13,28 @@ namespace CameronAnderson.Selenium.BasePages;
 public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigationLinks<T>
 {
 	[FindsBy(How.ClassName, "navbar-brand")]
-	protected IWebElement Title { get; set; }
+	protected NavigationLink<HomePage> Title { get; set; }
 
 	[FindsBy(How.ClassName, "navbar-toggler")]
 	protected IWebElement HamburgerMenu { get; set; }
 
 	[FindsBy(How.Id, "HomeLink")]
-	protected IWebElement HomeLink { get; set; }
+	protected NavigationLink<HomePage> HomeLink { get; set; }
 
 	[FindsBy(How.Id, "ResumeLink")]
-	protected IWebElement ResumeLink { get; set; }
+	protected NavigationLink<ResumePage> ResumeLink { get; set; }
 
 	[FindsBy(How.Id, "LoadingIconsLink")]
-	protected IWebElement LoadingIconsLink { get; set; }
+	protected NavigationLink<LoadingIconsPage> LoadingIconsLink { get; set; }
 
 	[FindsBy(How.Id, "FibonacciLink")]
-	protected IWebElement FibonacciCounterLink { get; set; }
+	protected NavigationLink<FibonacciCounterPage> FibonacciCounterLink { get; set; }
 
 	[FindsBy(How.Id, "RestaurantLevelsLink")]
-	protected IWebElement RestaurantLevelsLink { get; set; }
+	protected NavigationLink<RestaurantLevelsPage> RestaurantLevelsLink { get; set; }
+
+	[FindsBy(How.Id, "SourceLink")]
+	protected IWebElement SourceLink { get; set; }
 
 	public PageWithNavigationLinks(IWebDriver driver) : base(driver)
 	{
@@ -39,41 +44,47 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	public HomePage GoToHomePage()
 	{
 		OpenHamburgerMenu();
-		HomeLink.Click();
-		return HomePage.Load(WebDriver);
+		return HomeLink.Click();
+	}
+
+	public HomePage ClickTitle()
+	{
+		OpenHamburgerMenu();
+		return Title.Click();
 	}
 
 	public ResumePage GoToResumePage()
 	{
 		OpenHamburgerMenu();
-		ResumeLink.Click();
-		return ResumePage.Load(WebDriver);
+		return ResumeLink.Click();
 	}
 
 	public LoadingIconsPage GoToLoadingIconsPage()
 	{
 		OpenHamburgerMenu();
-		LoadingIconsLink.Click();
-		return LoadingIconsPage.Load(WebDriver);
+		return LoadingIconsLink.Click();
 	}
 
 	public FibonacciCounterPage GoToFibonacciPage()
 	{
 		OpenHamburgerMenu();
-		FibonacciCounterLink.Click();
-		return FibonacciCounterPage.Load(WebDriver);
+		return FibonacciCounterLink.Click();
 	}
 
 	public RestaurantLevelsPage GoToRestaurantLevelsPage()
 	{
 		OpenHamburgerMenu();
-		RestaurantLevelsLink.Click();
-		return RestaurantLevelsPage.Load(WebDriver);
+		return RestaurantLevelsLink.Click();
 	}
 
 	protected void OpenHamburgerMenu()
 	{
 		if (HamburgerMenu.Displayed)
 			HamburgerMenu.Click();
+	}
+
+	public void ClickSourceLink()
+	{
+		SourceLink.Click();
 	}
 }
