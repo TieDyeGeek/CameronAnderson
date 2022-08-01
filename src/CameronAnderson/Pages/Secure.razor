@@ -5,25 +5,53 @@
 
 <h1>Secure Page</h1>
 
+<input @bind="Password" />
+<button class="btn btn-primary" @onclick="Authorize">Authorize</button>
+<div class="message" style="color:@Color">@Message</div>
+
 @if (IsAuthorized)
 {
-	<h2>Congrats! You got through my security!</h2>	
+	<div>I recognize this is not actually secure.</div>
+	<div>Doing the OTP check client side, exposes the key used to validate it.</div>
+	<div>100% do NOT do this. I did this as an experiment to show off automated logins with two factor.</div>
 }
-else
-{
-	<input @bind="Password"/>
-	<button class="btn btn-primary" @onclick="Authorize">Authorize</button>
-}
-
 
 @code {
-
 	public bool IsAuthorized { get; set; }
 	public string Password { get; set; }
+	public string Message { get; set; }
+	public string Color { get; set; }
 
 	private void Authorize()
 	{
+		ClearMessage();
 		IsAuthorized = Authorizer.CanAccess(Password);
 		Password = "";
+		SetMessage();
+	}
+
+	private void ClearMessage()
+	{
+		Message = "";
+	}
+
+	private void SetMessage()
+	{
+		if (IsAuthorized)
+			SetCorrectMessage();
+		else
+			SetIncorrectMessage();
+	}
+
+	private void SetCorrectMessage()
+	{
+		Message = "Congrats! You got through my security!";
+		Color = "green";
+	}
+
+	private void SetIncorrectMessage()
+	{
+		Message = "Incorrect";
+		Color = "Red";
 	}
 }
