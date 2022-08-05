@@ -5,13 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0-preview.4.22251.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0-preview.4.22251.1" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0-preview.6.22330.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0-preview.6.22330.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0-preview.6.22324.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CameronAnderson.Restaurants\CameronAnderson.Restaurants.csproj" />
     <ProjectReference Include="..\CameronAnderson.Resume\CameronAnderson.Resume.csproj" />
+    <ProjectReference Include="..\CameronAnderson.Secure\CameronAnderson.Secure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +24,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\favicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
