@@ -847,6 +847,11 @@ a:hover[b-qhtqbni4jp] {
 a:active[b-qhtqbni4jp] {
 	text-decoration: underline;
 }
+/* /Pages/Secure.razor.rz.scp.css */
+.message[b-bimop9mllu] {
+	padding-top: 1em;
+	font-size: 1.5em;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-asng8nkymd] {
 	position: relative;
