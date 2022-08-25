@@ -1,7 +1,8 @@
-﻿using CameronAnderson.Selenium.BasePages;
+﻿using System.Numerics;
+using CameronAnderson.Selenium.Base.Elements;
+using CameronAnderson.Selenium.BasePages;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System.Numerics;
 using Xunit;
 
 namespace CameronAnderson.Selenium.Fibonacci;
@@ -9,10 +10,10 @@ namespace CameronAnderson.Selenium.Fibonacci;
 public class FibonacciCounterPage : PageWithNavigationLinks<FibonacciCounterPage>
 {
 	[FindsBy(How.ClassName, "btn-primary")]
-	private IWebElement IncrementButton { get; set; }
+	private Button IncrementButton { get; set; }
 
 	[FindsBy(How.TagName, "p")]
-	private IWebElement CurrentNumberLabel { get; set; }
+	private Label CurrentNumberLabel { get; set; }
 
 	public FibonacciCounterPage(IWebDriver driver) : base(driver)
 	{

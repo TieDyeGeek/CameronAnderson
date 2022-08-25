@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CameronAnderson.Selenium.Base.Elements;
 using CameronAnderson.Selenium.BasePages;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
@@ -10,7 +11,7 @@ namespace CameronAnderson.Selenium.LoadingIcons;
 public class LoadingIconsPage : PageWithNavigationLinks<LoadingIconsPage>
 {
 	[FindsBy(How.TagName, "H1")]
-	private IWebElement TitleText { get; set; }
+	private Label TitleText { get; set; }
 
 	public List<LoadingIconCard> LoadingIconCards { get; set; }
 
