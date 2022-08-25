@@ -45,7 +45,7 @@ public class BasePage<T> where T : BasePage<T>
 	protected virtual void WaitForElement(By by, double seconds = 5)
 	{
 		var wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(seconds));
-		wait.Until(e => e.FindElements(by).FirstOrDefault());
+		wait.Until(e => e.ElementExists(by));
 	}
 
 	protected virtual void WaitForElement(Expression<Func<T, object>> property, double seconds = 5)

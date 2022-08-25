@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 
 namespace CameronAnderson.Selenium.Base.Elements;
 
@@ -24,15 +25,15 @@ public class ReactMaterialDropDown : IWrapsElement, INeedWebDriver
 		Options.Where(x => x.Enabled).ToList();
 
 	public string SelectedOption => WrappedElement.Text;
+	public void Click() => WrappedElement.Click();
 
 	public void SelectOption(string text)
 	{
-		Clear();
 		Search(text);
 		WrappedElement.SendKeys(Keys.ArrowDown);
 		WrappedElement.SendKeys(Keys.Enter);
 
-		Wait.Seconds(1);
+		Wait.Seconds(5);
 	}
 
 	public void Search(string text)
@@ -42,23 +43,30 @@ public class ReactMaterialDropDown : IWrapsElement, INeedWebDriver
 		if (text == null) return;
 
 		WrappedElement.SendKeys(text);
-
 		Wait.Seconds(2);
 	}
 
 	public void Clear()
 	{
-		var clearButton = WrappedElement
-			.FindElement(By.ClassName("MuiAutocomplete-clearIndicator"));
+		var by = By.ClassName("MuiAutocomplete-clearIndicator");
+		Click();
+		Wait.Seconds(0.5);
 
-		clearButton.Click();
+		if (WebDriver.ElementExists(by))
+		{
+			Click();
+			var clearButton = WebDriver.FindElement(by);
+
+			clearButton.Click();
+			Wait.Seconds(5);
+		}
 	}
 
 	private List<DropDownOption> GatherOptions()
 	{
 		if (WebDriver == null) return new List<DropDownOption>();
 
-		WrappedElement.Click();
+		Click();
 
 		return WebDriver
 			.FindElements(By.ClassName("MuiAutocomplete-option"))
@@ -76,7 +84,7 @@ public class ReactMaterialDropDown : IWrapsElement, INeedWebDriver
 
 	private static bool IsEnabled(IWebElement element)
 	{
-		return element.GetAttribute("aria-disabled")
+		return !element.GetAttribute("aria-disabled")
 			.Equals("true", StringComparison.OrdinalIgnoreCase);
 	}
 }
