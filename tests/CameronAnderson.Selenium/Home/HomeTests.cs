@@ -31,12 +31,17 @@ public class HomeTests : BaseTest
 	[Fact]
 	public void SourceButtonTest()
 	{
-		Load().ClickSourceLink();
+		var expectedUrl = "https://github.com/tiedyegeek/CameronAnderson";
+
+		var page = Load();
+		Assert.Equal(expectedUrl, page.SourceLink.LinkUrl);
+
+		page.ClickSourceLink();
 		Wait(2);
 
 		VerifyNumberOfTabs(2);
-		SwitchToNextTab();
+		SwitchToOtherTab();
 
-		Assert.Equal("https://github.com/tiedyegeek/CameronAnderson", WebDriver.Url);
+		Assert.Equal(expectedUrl, WebDriver.Url);
 	}
 }

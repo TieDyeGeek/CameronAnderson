@@ -16,7 +16,7 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	protected NavigationLink<HomePage> Title { get; set; }
 
 	[FindsBy(How.ClassName, "navbar-toggler")]
-	protected IWebElement HamburgerMenu { get; set; }
+	protected Button HamburgerMenu { get; set; }
 
 	[FindsBy(How.Id, "HomeLink")]
 	protected NavigationLink<HomePage> HomeLink { get; set; }
@@ -34,7 +34,7 @@ public class PageWithNavigationLinks<T> : BasePage<T> where T : PageWithNavigati
 	protected NavigationLink<RestaurantLevelsPage> RestaurantLevelsLink { get; set; }
 
 	[FindsBy(How.Id, "SourceLink")]
-	protected IWebElement SourceLink { get; set; }
+	public Hyperlink SourceLink { get; set; }
 
 	public PageWithNavigationLinks(IWebDriver driver) : base(driver)
 	{
