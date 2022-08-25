@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Threading;
 using CameronAnderson.Selenium.Home;
 using OpenQA.Selenium;
 using Xunit;
@@ -20,11 +19,6 @@ public class BaseTest : IClassFixture<DriverWrapper>
 	{
 		WebDriver.GoToPage("");
 		return HomePage.Load(WebDriver);
-	}
-
-	protected void Wait(double seconds)
-	{
-		Thread.Sleep((int)(seconds * 1000));
 	}
 
 	protected void VerifyNumberOfTabs(int expectedCount)

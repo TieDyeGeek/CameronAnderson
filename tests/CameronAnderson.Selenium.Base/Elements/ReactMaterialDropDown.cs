@@ -32,7 +32,7 @@ public class ReactMaterialDropDown : IWrapsElement, INeedWebDriver
 		WrappedElement.SendKeys(Keys.ArrowDown);
 		WrappedElement.SendKeys(Keys.Enter);
 
-		Thread.Sleep(1000);
+		Wait.Seconds(1);
 	}
 
 	public void Search(string text)
@@ -43,7 +43,7 @@ public class ReactMaterialDropDown : IWrapsElement, INeedWebDriver
 
 		WrappedElement.SendKeys(text);
 
-		Thread.Sleep(2000);
+		Wait.Seconds(2);
 	}
 
 	public void Clear()

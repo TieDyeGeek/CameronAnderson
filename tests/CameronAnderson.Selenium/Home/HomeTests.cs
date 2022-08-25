@@ -1,4 +1,5 @@
-﻿using CameronAnderson.Selenium.BaseTesting;
+﻿using CameronAnderson.Selenium.Base;
+using CameronAnderson.Selenium.BaseTesting;
 using Xunit;
 
 namespace CameronAnderson.Selenium.Home;
@@ -37,7 +38,7 @@ public class HomeTests : BaseTest
 		Assert.Equal(expectedUrl, page.SourceLink.LinkUrl);
 
 		page.ClickSourceLink();
-		Wait(2);
+		Wait.Seconds(2);
 
 		VerifyNumberOfTabs(2);
 		SwitchToOtherTab();
