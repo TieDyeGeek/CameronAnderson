@@ -35,7 +35,7 @@ public class HomeTests : BaseTest
 		Wait(2);
 
 		VerifyNumberOfTabs(2);
-		SwitchToTab(2);
+		SwitchToNextTab();
 
 		Assert.Equal("https://github.com/tiedyegeek/CameronAnderson", WebDriver.Url);
 	}
