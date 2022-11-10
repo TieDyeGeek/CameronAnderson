@@ -1,0 +1,79 @@
+﻿.loading-container {
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.lama-container {
+	width: 75%;
+	height: 75%;
+	text-align: center;
+	vertical-align: middle;
+	overflow: visible;
+
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	stroke-linejoin: round;
+	stroke-miterlimit: 2;
+}
+
+.lama {
+	opacity: 0;
+
+	animation-name: lama;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards
+}
+
+.lama-head {
+	fill: #c1c1c1;
+
+	animation-duration: 2s;
+	animation-delay: 2.5s;
+}
+
+.lama-architecture {
+	fill: #000;
+	fill-rule: nonzero;
+
+	animation-duration: 2s;
+	animation-delay: 2.5s;
+}
+
+.lama-l {
+	fill: #F00;
+	animation-delay: 0.3s;
+	animation-name: lama-black;
+}
+
+.lama-a1 {
+	fill: #FA0;
+	animation-delay: 0.6s;
+	animation-name: lama-black;
+}
+
+.lama-m {
+	fill: #0F0;
+	animation-delay: 0.9s;
+	animation-name: lama-black;
+}
+
+.lama-a2 {
+	fill: #639;
+	animation-delay: 1.2s;
+	animation-name: lama-black;
+}
+
+@keyframes lama {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes lama-black {
+	0% { opacity: 0; }
+	100% { opacity: 1; fill:#000}
+}
