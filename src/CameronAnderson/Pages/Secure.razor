@@ -18,9 +18,9 @@
 
 @code {
 	public bool IsAuthorized { get; set; }
-	public string Password { get; set; }
-	public string Message { get; set; }
-	public string Color { get; set; }
+	public string Password { get; set; } = string.Empty;
+	public string Message { get; set; } = string.Empty;
+	public string Color { get; set; } = string.Empty;
 
 	private void Authorize()
 	{

@@ -31,20 +31,19 @@ else
 	<div>
 		@if (pickRandom)
 		{
-			<button @onclick=@SwitchToListView>Reset</button>	
+			<button @onclick="SwitchToListView">Reset</button>	
 		}
 		else
 		{
-			<button @onclick=@SwitchToRandomView>Pick Random 3</button>
+			<button @onclick="SwitchToRandomView">Pick Random 3</button>
 		}
 	</div>
 
 	<div class="level-descriptions">
-		<div>Level 1:  Fast Food (order at front)</div>
-		<div>Level 1.5:  Semi-Fast Food</div>
-		<div>Level 2:  Mom & Pops / Sports Bars ("sit downs")</div>
-		<div>Level 3:  Full Sit Downs (no TVs)</div>
-		<div>Level 4:  Fancy (specialty items; focus)</div>	
+		@foreach (var level in levels)
+		{
+			<div>Level @level.Level:  @level.Description</div>
+		}
 	</div>
 
 	if (pickRandom)
@@ -84,15 +83,17 @@ else
 	private double minimumLevel { get; set; }
 	private double maximumLevel { get; set; }
 
-	private List<Restaurant> restaurants { get; set; }
+	private List<Restaurant> restaurants { get; set; } = new();
+	private List<RestaurantLevel> levels { get; set; } = new();
 	private List<Restaurant> restaurantsInRange => restaurants
 		.Where(x => x.Level >= minimumLevel && x.Level <= maximumLevel).ToList();
 
 
 	protected override async Task OnInitializedAsync()
 	{
-		restaurants = RestaurantInteractor.GetRestaurants()
-			.OrderBy(x => x.Level).ThenBy(x => x.Name).ToList();
+		var restaurantOptions = RestaurantInteractor.GetRestaurants();
+		restaurants = restaurantOptions.Restaurants;
+		levels = restaurantOptions.Levels;
 		minimumLevel = restaurants.Select(x => x.Level).Min();
 		maximumLevel = restaurants.Select(x => x.Level).Max();
 	}

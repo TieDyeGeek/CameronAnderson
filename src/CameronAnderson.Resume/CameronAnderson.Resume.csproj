@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <AssemblyName>CameronAnderson.Resume</AssemblyName>
-    <RootNamespace>CameronAnderson.Resume</RootNamespace>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

@@ -1,15 +1,19 @@
-﻿namespace CameronAnderson.Restaurants;
+﻿using System.Collections.Generic;
 
-public record Restaurant
-{
-	public Restaurant(string name, double level, string? menuLink = null)
-	{
-		Name = name;
-		Level = level;
-		MenuLink = menuLink;
-	}
+namespace CameronAnderson.Restaurants;
 
-	public string Name { get; }
-	public double Level { get; }
-	public string? MenuLink { get; }
-}
+public record RestaurantOptions(
+	List<Restaurant> Restaurants,
+	List<RestaurantLevel> Levels
+);
+
+public record Restaurant(
+	string Name,
+	double Level,
+	string? MenuLink = null
+);
+
+public record RestaurantLevel(
+	double Level,
+	string Description
+);

@@ -16,16 +16,16 @@
 
 @code {
 	[Parameter]
-	public string Title { get; set; }
+	public string Title { get; set; } = string.Empty;
 
 	[Parameter]
-	public string Link { get; set; }
+	public string? Link { get; set; }
 
 	[Parameter]
 	public bool IsOnRight { get; set; }
 
 	[Parameter]
-	public RenderFragment ChildContent { get; set; }
+	public RenderFragment? ChildContent { get; set; }
 
 	public void Click()
 	{

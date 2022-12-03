@@ -9,7 +9,7 @@ public class OtpAuthorize : IAuthorize
 
 	public OtpAuthorize(IConfiguration configuration)
 	{
-		OtpKey = configuration["OtpKey"];
+		OtpKey = configuration["OtpKey"] ?? string.Empty;
 	}
 
 	public bool CanAccess(string password)
