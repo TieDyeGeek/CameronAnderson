@@ -9,10 +9,10 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "CameronAnderson.dll": "sha256-F3IFLzhuUYn4OiwcNf2BizEraJHQGOEEs90vNC7KoH0=",
-      "CameronAnderson.Restaurants.dll": "sha256-rZNhJmR8u+R9iXEkhRmcdN7JOj\/Ki\/5BNuuVx5UDlQM=",
-      "CameronAnderson.Resume.dll": "sha256-gNQc+QnuJ5K9ACtL\/LaJpDSWOPkflirhVV25KzDzi04=",
-      "CameronAnderson.Secure.dll": "sha256-POPlO5QFPjSkKwp5O4wSnRBTerMU3xphl5yAt7yEaxI=",
+      "CameronAnderson.dll": "sha256-vWcd51yCfbI0KhzqT3PRRSA8LIXvmYbZPnZGRZCo3ag=",
+      "CameronAnderson.Restaurants.dll": "sha256-906I4JRsy0xct7yBmqT53Y2mZHLRIR9g7br0Fer6NDQ=",
+      "CameronAnderson.Resume.dll": "sha256-46H5WeaJzGxMCSyr5GdweIGUisSOy+ecNxkfjnOmaEQ=",
+      "CameronAnderson.Secure.dll": "sha256-lO2KQy9dcVseCzdt8zk2uhWG6gQWTpdJFcLjQ4IUb+0=",
       "Microsoft.AspNetCore.Components.dll": "sha256-amacKVAScyxgeUPxLliq2QGQ3Y+M7yyFdmSrfgQBUcQ=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-IktuagETbZzYMRXZtX20ol+8I2cLcj4g9Hfqxas0EOQ=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-TS3dFf88pbqAp7JhP7ctXnP+4HoJJ++jw12y\/EYtcl4=",
@@ -38,7 +38,7 @@
       "System.Net.Primitives.dll": "sha256-MuTcqRHpR2asQLlGC2L0rULFl5QXctZmuM2nerWb9Uc=",
       "System.Private.CoreLib.dll": "sha256-CliOhLzatKtPMND6J0rDoTfC+pbGNW4ReRH4IKrrkZE=",
       "System.Private.Uri.dll": "sha256-a4cgL28eofqJEFxdJxkRMG38wb72ZxPN0+jzy3AU5bI=",
-      "System.Runtime.dll": "sha256-3qdChc8l7t85efLFYU53FZcRPwewDi8rByfAuPPYbIg=",
+      "System.Runtime.dll": "sha256-+uO2SebL6rEgdbOncunqJePsJbhKsDm8HUapjx3lEJw=",
       "System.Runtime.InteropServices.JavaScript.dll": "sha256-p6QlxaDsDhsi59NfL1cBzvgZxpJYohqpxTTr61ilg3E=",
       "System.Runtime.Numerics.dll": "sha256-+MW4CziU6vC9yay1FTwhJjCnvdoS8MBVWcGy2scNkmU=",
       "System.Security.Cryptography.dll": "sha256-di+\/kduhtdToDrDBZNX+EKZQL9DZiRmGttgnpp07GGg=",
