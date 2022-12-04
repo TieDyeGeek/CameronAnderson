@@ -779,6 +779,7 @@
 }
 /* /Pages/Restaurants/RestaurantComponent.razor.rz.scp.css */
 .restaurant-name[b-92me13sej2] {
+	display: block;
 	font-size: 1.2rem;
 	color: black;
 	padding: 0.2rem;
