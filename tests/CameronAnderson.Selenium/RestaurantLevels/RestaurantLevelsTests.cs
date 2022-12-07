@@ -70,6 +70,6 @@ public class RestaurantLevelsTests : BaseTest
 
 		var minimumsEnabled = page.AvailableMinimumOptions;
 
-		Assert.All(minimumsEnabled, x => Assert.True(x >= maximum));
+		Assert.All(minimumsEnabled, x => Assert.True(x <= maximum));
 	}
 }
