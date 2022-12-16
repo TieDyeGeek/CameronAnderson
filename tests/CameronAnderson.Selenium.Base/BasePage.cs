@@ -42,10 +42,15 @@ public class BasePage<T> where T : BasePage<T>
 		if (!equal) throw new PageException($"Path does not match (Expected: {path}, Actual: {currentPath})");
 	}
 
-	protected virtual void WaitForElement(By by, double seconds = 5)
+	protected virtual void WaitFor(Func<IWebDriver, bool> condition, double seconds = 5)
 	{
 		var wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(seconds));
-		wait.Until(e => e.ElementExists(by));
+		wait.Until(condition);
+	}
+
+	protected virtual void WaitForElement(By by, double seconds = 5)
+	{
+		WaitFor(e => e.ElementExists(by), seconds);
 	}
 
 	protected virtual void WaitForElement(Expression<Func<T, object>> property, double seconds = 5)
@@ -69,16 +74,15 @@ public class BasePage<T> where T : BasePage<T>
 	private void SetWebDriverInChildObjects(IWebDriver driver)
 	{
 		var properties = typeof(T).GetProperties(BindingFlags);
+		var propertiesNeedingWebDriver = properties
+			.Where(prop => typeof(INeedWebDriver).IsAssignableFrom(prop.PropertyType));
 
-		foreach (var property in properties)
+		foreach (var property in propertiesNeedingWebDriver)
 		{
-			if (typeof(INeedWebDriver).IsAssignableFrom(property.PropertyType))
-			{
-				var instanceNeedingDriver = property.GetValue(this);
-				var driverProperty = property.PropertyType.GetProperty(nameof(INeedWebDriver.WebDriver));
+			var instanceNeedingDriver = property.GetValue(this);
+			var driverProperty = property.PropertyType.GetProperty(nameof(INeedWebDriver.WebDriver));
 
-				driverProperty?.SetValue(instanceNeedingDriver, driver);
-			}
+			driverProperty?.SetValue(instanceNeedingDriver, driver);
 		}
 	}
 }

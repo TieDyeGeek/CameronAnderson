@@ -10,5 +10,5 @@ public class Label : IWrapsElement
 	}
 
 	public IWebElement WrappedElement { get; private set; }
-	public string Text => WrappedElement.Text;
+	public virtual string Text => WrappedElement.Text;
 }

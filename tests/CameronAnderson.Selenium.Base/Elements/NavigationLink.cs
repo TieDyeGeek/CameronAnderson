@@ -13,9 +13,9 @@ public class NavigationLink<T> : IWrapsElement, INeedWebDriver
 
 	public IWebElement WrappedElement { get; private set; }
 	public IWebDriver? WebDriver { get; set; }
-	public bool Enabled => WrappedElement.Enabled;
+	public virtual bool Enabled => WrappedElement.Enabled;
 
-	public T Click()
+	public virtual T Click()
 	{
 		WrappedElement.Click();
 

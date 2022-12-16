@@ -11,21 +11,21 @@ public class TextInput : IWrapsElement
 
 	public IWebElement WrappedElement { get; private set; }
 
-	public string Text => WrappedElement.Text;
-	public bool Enabled => WrappedElement.Enabled;
+	public virtual string Text => WrappedElement.Text;
+	public virtual bool Enabled => WrappedElement.Enabled;
 
-	public void SetText(string value)
+	public virtual void SetText(string value)
 	{
 		Clear();
 		SendKeys(value);
 	}
 
-	public void Clear()
+	public virtual void Clear()
 	{
 		WrappedElement.Clear();
 	}
 
-	public void SendKeys(string text)
+	public virtual void SendKeys(string text)
 	{
 		if (string.IsNullOrEmpty(text)) return;
 

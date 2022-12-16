@@ -8,5 +8,5 @@ public class Hyperlink : Button
 	{
 	}
 
-	public string LinkUrl => WrappedElement.GetAttribute("href");
+	public virtual string LinkUrl => WrappedElement.GetAttribute("href");
 }

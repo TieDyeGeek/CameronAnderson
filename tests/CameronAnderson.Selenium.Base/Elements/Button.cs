@@ -10,11 +10,11 @@ public class Button : IWrapsElement
 	}
 
 	public IWebElement WrappedElement { get; private set; }
-	public bool Enabled => WrappedElement.Enabled;
-	public bool Displayed => WrappedElement.Displayed;
-	public string Text => WrappedElement.Text;
+	public virtual bool Enabled => WrappedElement.Enabled;
+	public virtual bool Displayed => WrappedElement.Displayed;
+	public virtual string Text => WrappedElement.Text;
 
-	public void Click()
+	public virtual void Click()
 	{
 		WrappedElement.Click();
 	}

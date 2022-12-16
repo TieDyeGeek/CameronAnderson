@@ -10,10 +10,10 @@ public class CheckBox : IWrapsElement
 	}
 
 	public IWebElement WrappedElement { get; private set; }
-	public bool Selected => WrappedElement.Selected;
-	public bool Enabled => WrappedElement.Enabled;
+	public virtual bool Selected => WrappedElement.Selected;
+	public virtual bool Enabled => WrappedElement.Enabled;
 
-	public void Select(bool value)
+	public virtual void Select(bool value)
 	{
 		if (Selected == value)
 			return;
