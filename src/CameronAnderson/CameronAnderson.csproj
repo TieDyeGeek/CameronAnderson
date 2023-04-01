@@ -9,12 +9,16 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Radzen.Blazor" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CameronAnderson.Restaurants\CameronAnderson.Restaurants.csproj" />
     <ProjectReference Include="..\CameronAnderson.Resume\CameronAnderson.Resume.csproj" />
     <ProjectReference Include="..\CameronAnderson.Secure\CameronAnderson.Secure.csproj" />
+    <ProjectReference Include="..\CameronAnderson.Wordle\CameronAnderson.Wordle.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,5 +35,4 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
 </Project>

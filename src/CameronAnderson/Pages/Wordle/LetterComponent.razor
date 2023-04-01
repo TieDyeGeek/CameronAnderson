@@ -1,0 +1,35 @@
+﻿@using CameronAnderson.Wordle
+
+
+<div class="rz-p-sm-12 rz-text-align-center">
+    <h2>@Letter.Value.ToString().ToUpper()</h2>
+
+    <RadzenSelectBar @bind-Value=@Letter.Correctness TValue="Correctness" Multiple="false" class="mb-5">
+        <Items>
+            <RadzenSelectBarItem Text="Unknown" Value="Correctness.Unknown" />
+            <RadzenSelectBarItem Text="Correct" Value="Correctness.Correct" />
+            <RadzenSelectBarItem Text="Wrong Spot" Value="Correctness.WrongSpot" />
+            <RadzenSelectBarItem Text="Incorrect" Value="Correctness.Incorrect" />
+        </Items>
+    </RadzenSelectBar>
+
+    <RadzenDropDown @bind-Value=@Letter.Positions Data=@Positions TextProperty=@nameof(Position.Name) ValueProperty=@nameof(Position.Value)
+                    Multiple=true AllowClear=true AllowSelectAll="false" Placeholder="Select positions" Style="width: 100%; max-width: 400px;" />
+
+</div>
+
+
+@code
+{
+    [Parameter]
+    public Letter Letter { get; set; }
+
+    List<Position> Positions = new List<Position>
+    {
+        new Position("1", 0),
+        new Position("2", 1),
+        new Position("3", 2),
+        new Position("4", 3),
+        new Position("5", 4),
+    };
+}

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Secure", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Restaurants", "CameronAnderson.Restaurants\CameronAnderson.Restaurants.csproj", "{5B386169-C615-4893-AE9D-D4511AE66C3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Wordle", "CameronAnderson.Wordle\CameronAnderson.Wordle.csproj", "{0CD2B315-4B35-40BD-BCAD-F056241DC3C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameronAnderson.Wordle.Tests", "CameronAnderson.Wordle.Tests\CameronAnderson.Wordle.Tests.csproj", "{C183C796-125F-48B4-8A5B-F3D0A3CFA0D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{5B386169-C615-4893-AE9D-D4511AE66C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B386169-C615-4893-AE9D-D4511AE66C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B386169-C615-4893-AE9D-D4511AE66C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD2B315-4B35-40BD-BCAD-F056241DC3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD2B315-4B35-40BD-BCAD-F056241DC3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD2B315-4B35-40BD-BCAD-F056241DC3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD2B315-4B35-40BD-BCAD-F056241DC3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C183C796-125F-48B4-8A5B-F3D0A3CFA0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C183C796-125F-48B4-8A5B-F3D0A3CFA0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C183C796-125F-48B4-8A5B-F3D0A3CFA0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C183C796-125F-48B4-8A5B-F3D0A3CFA0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
