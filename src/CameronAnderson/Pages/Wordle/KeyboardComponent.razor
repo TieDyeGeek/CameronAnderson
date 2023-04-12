@@ -1,0 +1,47 @@
+﻿
+
+
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center"
+             Gap="0rem" Wrap="FlexWrap.NoWrap">
+    <KeyboardKeyComponent Letter="q" Words=@Words />
+    <KeyboardKeyComponent Letter="w" Words=@Words />
+    <KeyboardKeyComponent Letter="e" Words=@Words />
+    <KeyboardKeyComponent Letter="r" Words=@Words />
+    <KeyboardKeyComponent Letter="t" Words=@Words />
+    <KeyboardKeyComponent Letter="y" Words=@Words />
+    <KeyboardKeyComponent Letter="u" Words=@Words />
+    <KeyboardKeyComponent Letter="i" Words=@Words />
+    <KeyboardKeyComponent Letter="o" Words=@Words />
+    <KeyboardKeyComponent Letter="p" Words=@Words />
+</RadzenStack>
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center"
+             Gap="0rem" Wrap="FlexWrap.NoWrap">
+    <KeyboardKeyComponent Letter="a" Words=@Words />
+    <KeyboardKeyComponent Letter="s" Words=@Words />
+    <KeyboardKeyComponent Letter="d" Words=@Words />
+    <KeyboardKeyComponent Letter="f" Words=@Words />
+    <KeyboardKeyComponent Letter="g" Words=@Words />
+    <KeyboardKeyComponent Letter="h" Words=@Words />
+    <KeyboardKeyComponent Letter="j" Words=@Words />
+    <KeyboardKeyComponent Letter="k" Words=@Words />
+    <KeyboardKeyComponent Letter="l" Words=@Words />
+</RadzenStack>
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center"
+             Gap="0rem" Wrap="FlexWrap.NoWrap">
+    <KeyboardBackspaceComponent Words=@Words />
+    <KeyboardKeyComponent Letter="z" Words=@Words />
+    <KeyboardKeyComponent Letter="x" Words=@Words />
+    <KeyboardKeyComponent Letter="c" Words=@Words />
+    <KeyboardKeyComponent Letter="v" Words=@Words />
+    <KeyboardKeyComponent Letter="b" Words=@Words />
+    <KeyboardKeyComponent Letter="n" Words=@Words />
+    <KeyboardKeyComponent Letter="m" Words=@Words />
+    <KeyboardBackspaceComponent Words=@Words />
+</RadzenStack>
+
+@code
+{
+    [Parameter]
+    public Words Words { get; set; }
+
+}

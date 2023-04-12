@@ -1,0 +1,17 @@
+﻿<RadzenButton Shade="Shade.Lighter"
+              Click=@Clicked
+              Text="<"
+              ButtonStyle="ButtonStyle.Secondary"
+              Style="width:3.75rem; height:3rem; margin:0.25rem;"/>
+
+
+@code
+{
+    [Parameter]
+    public Words Words { get; set; }
+
+    private void Clicked()
+    {
+        Words.RemoveLetter();
+    }
+}

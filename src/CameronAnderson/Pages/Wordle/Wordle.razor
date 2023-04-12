@@ -1,65 +1,38 @@
 ﻿@page "/wordle"
-@using System.Numerics
 @using CameronAnderson.Wordle
 
 <h1>Wordle Solver</h1>
+<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.Left"
+             Gap="0rem" Wrap="FlexWrap.Wrap" Style="max-width:14rem; margin:auto;">
+    @foreach (var letter in Words.Letters)
+    {
+        <LetterComponent Letter=@letter />
+    }
+</RadzenStack>
+<br />
+<br />
 
-
-<LetterComponent Letter=Alphabet.A/>
-<LetterComponent Letter=Alphabet.B/>
-<LetterComponent Letter=Alphabet.C/>
-<LetterComponent Letter=Alphabet.D/>
-<LetterComponent Letter=Alphabet.E/>
-<LetterComponent Letter=Alphabet.F/>
-<LetterComponent Letter=Alphabet.G/>
-<LetterComponent Letter=Alphabet.H/>
-<LetterComponent Letter=Alphabet.I/>
-<LetterComponent Letter=Alphabet.J/>
-<LetterComponent Letter=Alphabet.K/>
-<LetterComponent Letter=Alphabet.L/>
-<LetterComponent Letter=Alphabet.M/>
-<LetterComponent Letter=Alphabet.N/>
-<LetterComponent Letter=Alphabet.O/>
-<LetterComponent Letter=Alphabet.P/>
-<LetterComponent Letter=Alphabet.Q/>
-<LetterComponent Letter=Alphabet.R/>
-<LetterComponent Letter=Alphabet.S/>
-<LetterComponent Letter=Alphabet.T/>
-<LetterComponent Letter=Alphabet.U/>
-<LetterComponent Letter=Alphabet.V/>
-<LetterComponent Letter=Alphabet.W/>
-<LetterComponent Letter=Alphabet.X/>
-<LetterComponent Letter=Alphabet.Y/>
-<LetterComponent Letter=Alphabet.Z/>
+<KeyboardComponent Words=@Words />
 
 <br />
 <RadzenButton Click=@(args => Solve()) Text="Solve" ButtonStyle="ButtonStyle.Primary" />
 <br />
+
 <RadzenDataGrid @ref="solutionsGrid" AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand" AllowPaging="true" PageSize="10" AllowSorting="true"
-                Data="@PossibleSolutions" TItem="string" >
+                Data="@PossibleSolutions" TItem="string">
     <Columns>
         <RadzenDataGridColumn TItem="string" Property=value Title="Solutions" />
     </Columns>
 </RadzenDataGrid>
 
 @code {
-    private Alphabet Alphabet = new Alphabet();
-
-    List<Position> Positions = new List<Position>
-    {
-        new Position("1", 0),
-        new Position("2", 1),
-        new Position("3", 2),
-        new Position("4", 3),
-        new Position("5", 4),
-    };
-
     RadzenDataGrid<string> solutionsGrid;
     private List<string> PossibleSolutions = new List<string>();
+    private Words Words = new Words();
 
     private void Solve()
     {
-        PossibleSolutions = Solver.Solve(Alphabet.Flatten());
+        PossibleSolutions = Solver.Solve(Words.Letters);
     }
 
 }

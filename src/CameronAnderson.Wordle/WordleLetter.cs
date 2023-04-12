@@ -1,7 +1,18 @@
-﻿using System;
-namespace CameronAnderson.Wordle;
+﻿namespace CameronAnderson.Wordle;
 
-public record WordleLetter(char Letter, Correctness Correctness, int? Position = null);
+public class WordleLetter
+{
+	public WordleLetter(char letter, Correctness correctness, int? position = null)
+	{
+		Letter = letter;
+		Correctness = correctness;
+		Position = position;
+	}
+
+	public char Letter { get; }
+	public Correctness Correctness { get; set; }
+	public int? Position { get; }
+}
 
 public enum Correctness
 {

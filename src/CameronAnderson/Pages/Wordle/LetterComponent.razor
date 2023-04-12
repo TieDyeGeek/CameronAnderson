@@ -1,35 +1,52 @@
 ﻿@using CameronAnderson.Wordle
 
+@*<div class="rz-p-sm-12 rz-text-align-left">
+        <h2>@Letter.Value.ToString().ToUpper()</h2>
 
-<div class="rz-p-sm-12 rz-text-align-center">
-    <h2>@Letter.Value.ToString().ToUpper()</h2>
+        <RadzenSelectBar @bind-Value=@Letter.Correctness TValue="Correctness" Multiple="false" class="mb-5" >
+            <Items>
+                <RadzenSelectBarItem Text="Unknown" Value="Correctness.Unknown" />
+                <RadzenSelectBarItem Text="Correct" Value="Correctness.Correct" />
+                <RadzenSelectBarItem Text="Wrong Spot" Value="Correctness.WrongSpot" />
+                <RadzenSelectBarItem Text="Incorrect" Value="Correctness.Incorrect" />
+            </Items>
+        </RadzenSelectBar>
 
-    <RadzenSelectBar @bind-Value=@Letter.Correctness TValue="Correctness" Multiple="false" class="mb-5">
-        <Items>
-            <RadzenSelectBarItem Text="Unknown" Value="Correctness.Unknown" />
-            <RadzenSelectBarItem Text="Correct" Value="Correctness.Correct" />
-            <RadzenSelectBarItem Text="Wrong Spot" Value="Correctness.WrongSpot" />
-            <RadzenSelectBarItem Text="Incorrect" Value="Correctness.Incorrect" />
-        </Items>
-    </RadzenSelectBar>
+        <RadzenDropDown @bind-Value=@Letter.Positions Data=@Positions
+                        TextProperty=@nameof(Position.Name) ValueProperty=@nameof(Position.Value)
+                        Multiple=true AllowClear=true AllowSelectAll="false"
+                        Placeholder="Select positions" Visible=@SelectBarIsVisible
+                        Style="width: 100%; max-width: 400px;" />
 
-    <RadzenDropDown @bind-Value=@Letter.Positions Data=@Positions TextProperty=@nameof(Position.Name) ValueProperty=@nameof(Position.Value)
-                    Multiple=true AllowClear=true AllowSelectAll="false" Placeholder="Select positions" Style="width: 100%; max-width: 400px;" />
+    </div>*@
 
-</div>
+<RadzenButton Click=@Clicked
+              Text=@(Letter.Letter.ToString().ToUpper())
+              ButtonStyle=@ButtonStyle
+              Style="width: 2.5rem; height: 2.5rem; margin: 0.1rem;"/>
 
 
 @code
 {
     [Parameter]
-    public Letter Letter { get; set; }
+    public WordleLetter Letter { get; set; }
 
-    List<Position> Positions = new List<Position>
+    private ButtonStyle ButtonStyle => Letter.Correctness switch
     {
-        new Position("1", 0),
-        new Position("2", 1),
-        new Position("3", 2),
-        new Position("4", 3),
-        new Position("5", 4),
+        Correctness.WrongSpot => ButtonStyle.Warning,
+        Correctness.Correct => ButtonStyle.Success,
+        _ => ButtonStyle.Dark
     };
+
+    private void Clicked()
+    {
+        Letter.Correctness = Letter.Correctness switch
+        {
+            Correctness.Incorrect => Correctness.WrongSpot,
+            Correctness.WrongSpot => Correctness.Correct,
+            Correctness.Correct => Correctness.Incorrect,
+            _ => Correctness.Incorrect
+        };
+    }
+
 }

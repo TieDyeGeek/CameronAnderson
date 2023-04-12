@@ -1,0 +1,20 @@
+﻿<RadzenButton Shade="Shade.Lighter"
+              Click=@Clicked
+              Text=@Letter.ToUpper()
+              ButtonStyle="ButtonStyle.Primary"
+              Style="width:2.5rem; height:3rem; margin:0.25rem;" />
+
+
+@code
+{
+    [Parameter]
+    public string Letter { get; set; }
+
+    [Parameter]
+    public Words Words { get; set; }
+
+    private void Clicked()
+    {
+        Words.AddLetter(Letter.ToCharArray().First());
+    }
+}
