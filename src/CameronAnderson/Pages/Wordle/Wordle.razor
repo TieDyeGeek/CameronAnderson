@@ -1,5 +1,6 @@
 ﻿@page "/wordle"
 @using CameronAnderson.Wordle
+@using System.Threading
 
 <h1>Wordle Solver</h1>
 <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Normal" JustifyContent="JustifyContent.Left"
@@ -26,6 +27,17 @@
 </RadzenDataGrid>
 
 @code {
+    protected override async void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender) return;
+
+        using var periodicTimer = new PeriodicTimer(TimeSpan.FromMilliseconds(150));
+        while (await periodicTimer.WaitForNextTickAsync())
+        {
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
     RadzenDataGrid<string> solutionsGrid;
     private List<string> PossibleSolutions = new List<string>();
     private Words Words = new Words();
@@ -34,5 +46,4 @@
     {
         PossibleSolutions = Solver.Solve(Words.Letters);
     }
-
 }
