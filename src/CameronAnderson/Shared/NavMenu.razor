@@ -6,33 +6,41 @@
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-	<ul class="nav flex-column">
-		<li class="nav-item px-3">
-			<NavLink class="nav-link" id="HomeLink" href="" Match="NavLinkMatch.All">
-				<span class="oi oi-home" aria-hidden="true"></span> Home
-			</NavLink>
-		</li>
-		<li class="nav-item px-3">
-			<NavLink class="nav-link" id="ResumeLink" href="resume">
-				<span class="oi oi-paperclip" aria-hidden="true"></span> Resume
-			</NavLink>
-		</li>
-		<li class="nav-item px-3">
-			<NavLink class="nav-link" id="LoadingIconsLink" href="loading">
-				<span class="oi oi-loop-circular" aria-hidden="true"></span> Loading Icons
-			</NavLink>
-		</li>
-		<li class="nav-item px-3">
-			<NavLink class="nav-link" id="FibonacciLink" href="fibonacci">
-				<span class="oi oi-plus" aria-hidden="true"></span> Fibonacci Counter
-			</NavLink>
-		</li> 
-		<li class="nav-item px-3">
-			<NavLink class="nav-link" id="RestaurantLevelsLink" href="restaurantlevels">
-				<span class="oi oi-signpost" aria-hidden="true"></span> Restaurant Levels
-			</NavLink>
-		</li>
-	</ul>
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="HomeLink" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="ResumeLink" href="resume">
+                <span class="oi oi-paperclip" aria-hidden="true"></span> Resume
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="LoadingIconsLink" href="loading">
+                <span class="oi oi-loop-circular" aria-hidden="true"></span> Loading Icons
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="FibonacciLink" href="fibonacci">
+                <span class="oi oi-plus" aria-hidden="true"></span> Fibonacci Counter
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="RestaurantLevelsLink" href="restaurantlevels">
+                <span class="oi oi-signpost" aria-hidden="true"></span> Restaurant Levels
+            </NavLink>
+        </li>
+    </ul>
+    <hr style="border: none; background-color: #66a; height: 1.5px; margin: 1px 0;" />
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" id="SourceLink" href="https://github.com/tiedyegeek/CameronAnderson" target="_blank">
+                <span class="oi oi-fork" aria-hidden="true"></span> Source Code
+            </NavLink>
+        </li>
+    </ul>
 </div>
 
 @code {
