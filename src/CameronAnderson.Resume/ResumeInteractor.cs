@@ -61,7 +61,7 @@ public static class ResumeInteractor
 	{
 		new Education(
 			Degree: "Master of Science",
-			Date: new DateTime(2018, 5, 1),
+			Date: new DateOnly(2018, 5, 1),
 			Major: "Computer Science",
 			Note: "Project:  Two-Player Asymmetrical Virtual Reality Maze Game",
 			Institution: WIU,
@@ -69,7 +69,7 @@ public static class ResumeInteractor
 		),
 		new Education(
 			Degree: "Bachelor of Science",
-			Date: new DateTime(2017, 5, 1),
+			Date: new DateOnly(2017, 5, 1),
 			Major: "Computer Science",
 			Note: "Minors:  Information Systems, Mathematics",
 			Institution: WIU,
@@ -80,7 +80,7 @@ public static class ResumeInteractor
 	private static Experience TechnicalArchitect => new(
 		Company: CSE,
 		Position: "Technical Architect",
-		EmploymentStart: new DateTime(2020, 12, 24),
+		EmploymentStart: new DateOnly(2020, 12, 24),
 		EmploymentEnd: null,
 		Notes: new List<string>
 		{
@@ -96,8 +96,8 @@ public static class ResumeInteractor
 	private static Experience Developer => new(
 		Company: CSE,
 		Position: "Enterprise Software Developer",
-		EmploymentStart: new DateTime(2018, 11, 27),
-		EmploymentEnd: new DateTime(2020, 12, 24),
+		EmploymentStart: new DateOnly(2018, 11, 27),
+		EmploymentEnd: new DateOnly(2020, 12, 24),
 		Notes: new List<string>
 		{
 			"Deveop and maintain enterprise web applications using C# and .NET",
@@ -108,8 +108,8 @@ public static class ResumeInteractor
 	private static Experience AssistantComplexDirector => new(
 		Company: UHDS,
 		Position: "Assistant Complex Director",
-		EmploymentStart: new DateTime(2017, 6, 1),
-		EmploymentEnd: new DateTime(2018, 5, 19),
+		EmploymentStart: new DateOnly(2017, 6, 1),
+		EmploymentEnd: new DateOnly(2018, 5, 19),
 		Notes: new List<string>
 		{
 			"Supervised two Resident Managers in Graduate and Family Housing",
@@ -121,8 +121,8 @@ public static class ResumeInteractor
 	private static Experience CommunityCoordinator => new(
 		Company: UHDS,
 		Position: "Community Coordinator",
-		EmploymentStart: new DateTime(2017, 2, 19),
-		EmploymentEnd: new DateTime(2017, 6, 1),
+		EmploymentStart: new DateOnly(2017, 2, 19),
+		EmploymentEnd: new DateOnly(2017, 6, 1),
 		Notes: new List<string>
 		{
 			"Assisted with administrative duties in the hall including on-call duty rotation",
@@ -133,8 +133,8 @@ public static class ResumeInteractor
 	private static Experience ResidentAssistant => new(
 		Company: UHDS,
 		Position: "Resident Assistant",
-		EmploymentStart: new DateTime(2014, 8, 1),
-		EmploymentEnd: new DateTime(2017, 2, 19),
+		EmploymentStart: new DateOnly(2014, 8, 1),
+		EmploymentEnd: new DateOnly(2017, 2, 19),
 		Notes: new List<string>
 		{
 			"Managed a cohesive residence hall living environment of 30-50 students each year",
@@ -155,7 +155,7 @@ public static class ResumeInteractor
 	);
 
 	private static Company WIU => new(
-		Name: "Western Illinois University Housing",
+		Name: "Western Illinois University",
 		Location: "Macomb, IL",
 		Url: "https://www.wiu.edu/"
 	);

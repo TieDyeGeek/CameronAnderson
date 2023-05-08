@@ -19,20 +19,28 @@ public record Link(
 
 public record Education(
 	string Degree,
-	DateTime Date,
+	DateOnly Date,
 	string Major,
 	string Note,
 	Company Institution,
 	double Gpa
-);
+)
+{
+	public string DateFormatted => Date.ToAbreviatedMonthYearString();
+};
 
 public record Experience(
 	Company Company,
 	string Position,
-	DateTime EmploymentStart,
-	DateTime? EmploymentEnd,
+	DateOnly EmploymentStart,
+	DateOnly? EmploymentEnd,
 	List<string> Notes
-);
+)
+{
+	public string EmploymentStartFormatted => EmploymentStart.ToAbreviatedMonthYearString();
+	public string EmploymentEndFormatted => EmploymentEnd?.ToAbreviatedMonthYearString() ?? "Present";
+	public string EmploymentDatesFormatted => $"{EmploymentStartFormatted} — {EmploymentEndFormatted}";
+};
 
 public record Company(
 	string Name,
