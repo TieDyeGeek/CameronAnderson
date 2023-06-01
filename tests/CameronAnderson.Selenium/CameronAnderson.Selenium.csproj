@@ -31,6 +31,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CameronAnderson.Selenium.Base\CameronAnderson.Selenium.Base.csproj" />
+    <ProjectReference Include="..\CameronAnderson.Selenium.Base\CameronAnderson.Selenium.Base.csproj">
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
   </ItemGroup>
 </Project>
